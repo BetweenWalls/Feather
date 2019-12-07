@@ -1,32 +1,22 @@
-/⃓═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 /	"Feather" Item Filter for Diablo II: Path of Diablo
-/		Date Updated:  2 DEC 2019
+/		Date Updated:	7 DEC 2019
 /		Direct URL:     https://raw.githubusercontent.com/BetweenWalls/Feather/master/item.filter
-/⃓═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-/ Installation:
-/	1. Ensure this file is named item.filter
-/	2. Copy this file to your Path of Diablo directory  (C:\...\Diablo II\Path of Diablo)
-/	     - this can also be done via the Launcher by using the direct URL or the file's location  (C:\...\Downloads\item.filter)
-/	3. Enable custom filters from the in-game Settings menu
-/
+//═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 / Notes:
 /	All hidden items are preceded by "hidden" and a short description
-/	The "/⃓̲" symbol functions the same as "/" and is used to distinguish filtration rules from everything else
 /	This file was created in Notepad++, and may display incorrectly with other programs or settings  (8-space tabs, UTF-8 encoding, Courier New)
-/	"Regular": non-magic  (white/gray items)
-/	"Automod": any affix that automatically appears on all regular/magic/rare versions of an item
-/	"Pointmod": any affix that adds extra skill points to an individual skill  (also known as "staffmods")
-/⃓═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+//═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 
 
-/⃓̲ ┌──────────────────┐
-/⃓̲═╡ Gold and Potions ╞══════════════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └──────────────────┘
-/⃓̲ Hidden: smaller gold piles - levels 10, 20, 30, 50, 70, 90
+// ┌──────────────────┐
+//═╡ Gold and Potions ╞══════════════════════════════════════════════════════════════════════════════════════════════════
+// └──────────────────┘
+// Hidden: smaller gold piles - levels 10, 20, 30, 50, 70, 90
 ItemDisplay[((GOLD<3000 CLVL>89 CHARSTAT15>400000) OR (GOLD<1800 CLVL>69 CHARSTAT15>200000) OR (GOLD<1200 CLVL>49) OR (GOLD<600 CLVL>29) OR (GOLD<300 CLVL>19) OR (GOLD<100 CLVL>9) OR GOLD<30)]:
 
-/⃓̲ Hidden: minor, lesser, standard, & greater potions - levels 18, 30, 40, 75
+// Hidden: minor, lesser, standard, & greater potions - levels 18, 30, 40, 75
 ItemDisplay[(hp1 OR mp1) CLVL>17]:
 ItemDisplay[(hp2 OR mp2) CLVL>29]:
 ItemDisplay[(hp3 OR mp3) CLVL>39]:
@@ -40,12 +30,12 @@ ItemDisplay[mp3]:	%BLUE%[] %GRAY%M³			// Mana
 ItemDisplay[hp4]:	%RED%[] %WHITE%H-			// Greater Healing
 ItemDisplay[mp4]:	%BLUE%[] %WHITE%M-			// Greater Mana
 
-/⃓̲ Hidden: Stamina Potion - level 30
-/ItemDisplay[(wms OR vps) CLVL>29]:
+// Hidden: Stamina Potion - level 30
+ItemDisplay[(wms OR vps) CLVL>29]:
 ItemDisplay[vps]:	%WHITE%[] %GRAY%S			// Stamina
 
-/⃓̲ Hidden: Throwing Potions - level 50
-/ItemDisplay[(opl OR opm OR ops OR gpl OR gpm OR gps) CLVL>49]:
+// Hidden: Throwing Potions - level 50
+ItemDisplay[(opl OR opm OR ops OR gpl OR gpm OR gps) CLVL>49]:
 ItemDisplay[opl]:	%DGREEN%[] %GRAY%f¹			// Fulminating
 ItemDisplay[opm]:	%DGREEN%[] %GRAY%f²			// Exploding
 ItemDisplay[ops]:	%DGREEN%[] %GRAY%f³			// Oil
@@ -53,7 +43,7 @@ ItemDisplay[gpl]:	%DGREEN%[] %GRAY%p¹			// Strangling
 ItemDisplay[gpm]:	%DGREEN%[] %GRAY%p²			// Choking
 ItemDisplay[gps]:	%DGREEN%[] %GRAY%p³			// Rancid
 
-/⃓̲ Other Potions
+// Other Potions
 ItemDisplay[hp5]:	%RED%[] %WHITE%H			// Super Healing
 ItemDisplay[mp5]:	%BLUE%[] %WHITE%M			// Super Mana
 ItemDisplay[rvs]:	%PURPLE%[] %WHITE%r-			// Rejuvenation
@@ -62,10 +52,10 @@ ItemDisplay[yps]:	%DGREEN%[] %WHITE%A			// Antidote
 ItemDisplay[wms]:	%YELLOW%[] %GRAY%T			// Thawing
 
 
-/⃓̲ ┌───────────────────┐
-/⃓̲═╡ Other Basic Items ╞═════════════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └───────────────────┘
-/⃓̲ Endgame Items
+// ┌───────────────────┐
+//═╡ Other Basic Items ╞═════════════════════════════════════════════════════════════════════════════════════════════════
+// └───────────────────┘
+// Endgame Items
 ItemDisplay[tes]: Essence of Suffering %GRAY%(Andariel & Duriel)
 ItemDisplay[ceh]: Essence of Hatred %GRAY%(Mephisto)
 ItemDisplay[bet]: Essence of Terror %GRAY%(Diablo)
@@ -74,30 +64,30 @@ ItemDisplay[pk1]:	%NAME% %GRAY%(Countess)			// Key of Terror
 ItemDisplay[pk2]:	%NAME% %GRAY%(Summoner)			// Key of Hatred
 ItemDisplay[pk3]:	%NAME% %GRAY%(Nihlathak)		// Key of Destruction
 
-/⃓̲ PoD Items
-ItemDisplay[cx5]: %RED% Orb of Corruption 			// Orb of Corruption	(used as a trading currency like runes; closest to Lem in value)
-ItemDisplay[cx7]: %ORANGE%   Key of Chaos   			// Key of Chaos		(drops in maps)
-ItemDisplay[ma4 ID]: %TAN%%NAME% %GRAY%[T1]			// Desecrated Temple	(drops from Hephasto in Hell)
-ItemDisplay[ma5 ID]: %TAN%%NAME% %GRAY%[T2]			// Frigid Plateau
-ItemDisplay[ma6 ID]: %TAN%%NAME% %GRAY%[T3]			// Ruined Citadel
-ItemDisplay[ma2 ID]: %TAN%%NAME% %GRAY%[T4]			// Forgotten Desert
+// PoD Items
+ItemDisplay[cx5]:	%RED% Orb of Corruption 		// Orb of Corruption
+ItemDisplay[cx7]:	%ORANGE%   Key of Chaos   		// Key of Chaos
+ItemDisplay[ma4 ID]:	%TAN%%NAME% %GRAY%[T1]			// Desecrated Temple
+ItemDisplay[ma5 ID]:	%TAN%%NAME% %GRAY%[T2]			// Frigid Plateau
+ItemDisplay[ma6 ID]:	%TAN%%NAME% %GRAY%[T3]			// Ruined Citadel
+ItemDisplay[ma2 ID]:	%TAN%%NAME% %GRAY%[T4]			// Forgotten Desert
 ItemDisplay[ma4 OR ma5 OR ma6 OR ma2 OR maz]: %TAN%%NAME%
 
-/⃓̲ Miscellaneous
-ItemDisplay[tsc]:	%BLUE%­ %WHITE%TP			// Scroll of Town Portal
-ItemDisplay[isc]:	%RED%­ %WHITE%ID			// Scroll of Identify
-ItemDisplay[key]: %GRAY%%NAME%					// Key
+// Miscellaneous
+ItemDisplay[tsc]:	%BLUE%­ %WHITE%tp			// Scroll of Town Portal
+ItemDisplay[isc]:	%RED%­ %WHITE%id			// Scroll of Identify
+ItemDisplay[key]:	%GRAY%%NAME%				// Key
 ItemDisplay[leg SOCK>0 NMAG]: %WHITE%%NAME% %GRAY%[%SOCKETS%]
-ItemDisplay[leg]: %NAME%					// Wirt's Leg
+ItemDisplay[leg]:	%NAME%					// Wirt's Leg
 
-/⃓̲ Quest Equipment Items
+// Quest Equipment Items
 ItemDisplay[(hdm OR msf OR vip OR hst OR g33 OR qf1 OR qf2 OR hfh) SOCK=0]: %NAME%
 
 
-/⃓̲ ┌──────┐
-/⃓̲═╡ Gems ╞══════════════════════════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └──────┘
-/⃓̲ Gem Colors & Quality Differentiation
+// ┌──────┐
+//═╡ Gems ╞══════════════════════════════════════════════════════════════════════════════════════════════════════════════
+// └──────┘
+// Gem Colors & Quality Differentiation
 ItemDisplay[GEMLEVEL=1]: *%ORANGE%] %GRAY%%NAME%%CONTINUE%
 ItemDisplay[GEMLEVEL=2]: +%ORANGE%] %GRAY%%NAME%%CONTINUE%
 ItemDisplay[GEMLEVEL=3]: ¤%ORANGE%] %GRAY%%NAME%%CONTINUE%
@@ -112,14 +102,14 @@ ItemDisplay[GEMTYPE=2]: %ORANGE%[%WHITE%%NAME%
 ItemDisplay[GEMTYPE=7]: %ORANGE%[%GRAY%%NAME%
 
 
-/⃓̲ ┌───────┐
-/⃓̲═╡ Runes ╞═════════════════════════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └───────┘
-/⃓̲ Modification: Runes
+// ┌───────┐
+//═╡ Runes ╞═════════════════════════════════════════════════════════════════════════════════════════════════════════════
+// └───────┘
+// Modification
 ItemDisplay[RUNE>0]:	%NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%CONTINUE%
 
-/⃓̲ Individual Rules
-/⃓̲    Lowest Runes
+// Individual Rules
+//    Lowest Runes
 /ItemDisplay[r01]:	%NAME%						// El
 /ItemDisplay[r02]:	%NAME%						// Eld
 /ItemDisplay[r03]:	%NAME%						// Tir
@@ -127,158 +117,145 @@ ItemDisplay[RUNE>0]:	%NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%CONTINUE%
 /ItemDisplay[r05]:	%NAME%						// Eth
 /ItemDisplay[r06]:	%NAME%						// Ith
 /ItemDisplay[r07]:	%NAME%						// Tal
-ItemDisplay[r08]:	 %NAME% 					// Ral  (used for amulet crafting, recharging armor)
-/ItemDisplay[r09]:	%NAME%						// Ort  (used for recharging weapons)
+ItemDisplay[r08]:	 %NAME% 					// Ral
+/ItemDisplay[r09]:	%NAME%						// Ort
 /ItemDisplay[r10]:	%NAME%						// Thul
-ItemDisplay[r11]:	 %NAME% 					// Amn  (used for amulet & ring crafting)
-/ItemDisplay[r12]:	%NAME%						// Sol  (used for ring crafting)
+ItemDisplay[r11]:	 %NAME% 					// Amn
+/ItemDisplay[r12]:	%NAME%						// Sol
 /ItemDisplay[r13]:	%NAME%						// Shael
 /ItemDisplay[r14]:	%NAME%						// Dol
-/⃓̲    Upper Low Runes
+//    Upper Low Runes
 /ItemDisplay[r15]:	 %NAME% 					// Hel
 /ItemDisplay[r16]:	 %NAME% 					// Io
 /ItemDisplay[r17]:	 %NAME% 					// Lum
 /ItemDisplay[r18]:	 %NAME% 					// Ko
 /ItemDisplay[r19]:	 %NAME% 					// Fal
-/⃓̲    Mid Runes
-ItemDisplay[r20]:	  %NAME%  					// Lem	 worth about the same or slightly less than Pul  (Lems are used for upgrading exceptional armor, which is a prerequisite for some 4-socket corruptions)
-ItemDisplay[r21]:	  %NAME%  					// Pul	 worth atleast 0.015625 - 0.02778 "HR" (1/2 Um - 1/3 Mal)  -  potential trade value: 0.04 "HR" (Sur = 25 Pul)
-ItemDisplay[r22]:	   %NAME%   					// Um	 worth atleast 0.03125 - 0.0556 "HR" (1/2 Mal - 1/3 Ist)  -  potential trade value: 0.0625 "HR" (Vex = 8 Um)
-ItemDisplay[r23]:	   %NAME%   					// Mal	 worth atleast 0.0625 - 0.083 "HR" (1/2 Ist - 1/3 Gul)  -  potential trade value: 0.1 "HR" (Vex = 5 Mal)
-ItemDisplay[r24]:	    %NAME%    					// Ist	 worth 0.125 - 0.1667 "HR" (1/2 Gul - 1/3 Vex)
-ItemDisplay[r25]:	     %NAME%     				// Gul	 always worth 1/2 of Vex, typically 0.25 "HR"
-/⃓̲    High Runes  (not available from Hellforge quest)
-ItemDisplay[r26]:	       %NAME%       				// Vex	 worth about the same or slightly less than Ohm, typically 0.5 "HR"
-ItemDisplay[	r32]:	        %NAME%        				// Cham	 always worth 1/2 of Zod
-ItemDisplay[r27]:	         %NAME%         			// Ohm	 always worth 1/2 of Lo
-ItemDisplay[	r29]:	           %NAME%           			// Sur	 the benchmark rune, worth 1 "HR"
-ItemDisplay[	r33]:	            %NAME%            			// Zod	 valued between Sur and Lo, typically 1 "HR"
-ItemDisplay[r28]:	               %NAME%               		// Lo	 valued between Sur and Ber, but not more than 1.5 "HR"
-ItemDisplay[r30]:	                 %NAME%                 	// Ber	 always worth 2x Sur, or 2 "HR"
-ItemDisplay[r31]:	                    %NAME%                    	// Jah	 typically worth about the same or slightly more than Ber, up to 2.5 "HR"
+//    Mid Runes
+ItemDisplay[r20]:	  %NAME%  					// Lem
+ItemDisplay[r21]:	  %NAME%  					// Pul
+ItemDisplay[r22]:	   %NAME%   					// Um
+ItemDisplay[r23]:	   %NAME%   					// Mal
+ItemDisplay[r24]:	    %NAME%    					// Ist
+ItemDisplay[r25]:	     %NAME%     				// Gul
+//    High Runes
+ItemDisplay[r26]:	       %NAME%       				// Vex
+ItemDisplay[	r32]:	        %NAME%        				// Cham
+ItemDisplay[r27]:	         %NAME%         			// Ohm
+ItemDisplay[	r29]:	           %NAME%           			// Sur
+ItemDisplay[	r33]:	            %NAME%            			// Zod
+ItemDisplay[r28]:	               %NAME%               		// Lo
+ItemDisplay[r30]:	                 %NAME%                 	// Ber
+ItemDisplay[r31]:	                    %NAME%                    	// Jah
 
-/⃓̲ Collective Rules
+// Collective Rules
 ItemDisplay[RUNE>0 RUNE<15]:	%NAME%
 ItemDisplay[RUNE>14 RUNE<20]:	 %NAME% 	
 
 
-/⃓̲ ┌────────┐
-/⃓̲═╡ Jewels ╞════════════════════════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └────────┘
-/⃓̲ Modification: Jewels
+// ┌─────────────────┐
+//═╡ Jewels & Charms ╞════════════════════════════════════════════════════════════════════════════════════════════════════════════
+// └─────────────────┘
+// Modification
 ItemDisplay[jew MAG]: %ORANGE%{%DGREEN%O%ORANGE%} %BLUE%%NAME%%CONTINUE%
 ItemDisplay[jew RARE]: %ORANGE%{%DGREEN%O%ORANGE%} %YELLOW%%NAME%%CONTINUE%
 ItemDisplay[jew UNI]: %ORANGE%{%DGREEN%O%ORANGE%} %GOLD%%NAME%%CONTINUE%
-
-/⃓̲ Show ilvl for rerolling
-ItemDisplay[jew RARE ILVL<31]: %NAME% %GRAY%[L%ILVL%]		// ilvl 16-30 shouldn't be rerolled until level 85+  (ilvl 15 and under shouldn't be rerolled)
-
-
-/⃓̲ ┌────────┐
-/⃓̲═╡ Charms ╞════════════════════════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └────────┘
-/⃓̲ Modification: Charms
 ItemDisplay[(cm1 OR cm2 OR cm3) MAG]: %PURPLE%%NAME%%CONTINUE%
 
-/⃓̲ Show ilvl for rerolling
+// Show ilvl for Charm rerolling
 ItemDisplay[(((cm1 OR cm3) ILVL>90) OR (cm1 (ILVL=47 OR (ILVL>56 ILVL<63)))) MAG]: %NAME% %TAN%[L%ILVL%]	// Tan ilvl = best for rerolling
 ItemDisplay[((cm1 ILVL>46) OR (cm3 ILVL>49)) MAG]: %NAME% %GRAY%[L%ILVL%]					// Gray ilvl = okay for rerolling
 
 
-/⃓̲ ┌───────────────────┐
-/⃓̲═╡ General Equipment ╞═════════════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └───────────────────┘
-/⃓̲ Catchall - Non-Equipment
+// ┌───────────────────┐
+//═╡ General Equipment ╞═════════════════════════════════════════════════════════════════════════════════════════════════
+// └───────────────────┘
+// Catchall - Non-Equipment
 ItemDisplay[!(ARMOR OR WEAPON OR rin OR amu OR aq2 OR cq2 OR (UNI (jew OR cm3 OR cm2 OR cm1)))]: %NAME%
 
-/⃓̲ Hidden: Regular Arrows/Bolts - level 10
-ItemDisplay[(aq2 OR cq2) (CLVL>9 NMAG)]:
-
-/⃓̲ Corrupted Equipment
-ItemDisplay[ITEMSTAT360>0 SOCK>0]: %NAME% %RED%[%SOCKETS%]
-ItemDisplay[ITEMSTAT360>0]: %NAME% %RED%=
-
-/⃓̲ Modification: Sockets
+// Modification: Sockets
 ItemDisplay[!NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
 
-/⃓̲ Pseudo-Ethereal Equipment  (Self-Repairing/Indestructible & Ethereal combination)
-ItemDisplay[(ITEMSTAT152>0 OR ITEMSTAT252>0 OR ITEMSTAT253>0) !RW ETH]: %NAME% %PURPLE%>>
-
-/⃓̲ Modification: Ethereal
-ItemDisplay[RARE ID ETH]: %GRAY%eth %YELLOW%%NAME%%CONTINUE%
+// Modification: Ethereal
+ItemDisplay[MAG ETH]: %GRAY%eth %BLUE%%NAME%%CONTINUE%
+ItemDisplay[RARE ETH]: %GRAY%eth %YELLOW%%NAME%%CONTINUE%
+ItemDisplay[UNI ETH]: %GRAY%eth %GOLD%%NAME%%CONTINUE%
+ItemDisplay[SET ETH]: %GRAY%eth %GREEN%%NAME%%CONTINUE%
 ItemDisplay[RW !ETH]: %WHITE%%NAME%%CONTINUE%
-ItemDisplay[UNI ETH (ID OR (!ID !(urn OR xla OR xpl OR uld OR uul OR uar OR uit OR uvb OR 9ax OR 9la OR 7ba OR 9gm OR 7sp OR 7wh OR 7gm OR 9cr OR 7b7 OR 7gd OR 7dg OR 7bl OR 7wc OR 9st OR 7p7 OR 9cs OR 7s7 OR 7gl OR 7ts OR ama OR 9tk OR 9ta OR 7bk OR 7b8)))]: %GRAY%eth %GOLD%%NAME%%CONTINUE%
 
 
-/⃓̲ ┌──────────────────┐
-/⃓̲═╡ Non-Weapon/Armor ╞══════════════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └──────────────────┘
-/⃓̲ Quivers
+// ┌──────────────────┐
+//═╡ Non-Weapon/Armor ╞══════════════════════════════════════════════════════════════════════════════════════════════════
+// └──────────────────┘
+// Hidden: Regular Arrows/Bolts - level 10
+ItemDisplay[(aq2 OR cq2) (CLVL>9 NMAG)]:
+
+// Quivers
 ItemDisplay[(aq2 OR cq2) !UNI]: %NAME%
 
-/⃓̲ Jewelry
-ItemDisplay[amu MAG !ID ILVL>89]: %NAME% %WHITE%[L%ILVL%]
-ItemDisplay[MAG ID ((amu ILVL>85) OR (rin ILVL>61))]: %NAME% %GRAY%[L%ILVL%]
-ItemDisplay[(amu OR rin) RARE !ID]:	  %NAME%  	
+// Jewelry
+ItemDisplay[amu MAG !ID ILVL>89]: %NAME% %WHITE%[L%ILVL%]			// ilvl 90+ amulets emphasized
+ItemDisplay[MAG ID ((amu ILVL>85) OR (rin ILVL>61))]: %NAME% %GRAY%[L%ILVL%]	// ilvl for crafting
+ItemDisplay[(amu OR rin) RARE !ID]:	  %NAME%  				// rare jewelry highlighted
 ItemDisplay[(amu OR rin) (MAG OR RARE)]: %NAME%
 
 
-/⃓̲ ┌──────────────────────────────────────────────────────┐
-/⃓̲═╡ Rare/Unique/Set/Runeword/Crafted Items  (identified) ╞══════════════════════════════════════════════════════════════
-/⃓̲ └──────────────────────────────────────────────────────┘
-/⃓̲ Unique/Set/Runeword Items
-ItemDisplay[((UNI OR SET OR RW) ID)]: %NAME%
+// ┌──────────────────────────────────────────────────────┐
+//═╡ Rare/Unique/Set/Runeword/Crafted Items  (identified) ╞══════════════════════════════════════════════════════════════
+// └──────────────────────────────────────────────────────┘
+// Unique/Set Items
+ItemDisplay[((UNI OR SET) ID)]: %NAME%
 
-/⃓̲ Non-Class Rares
+// Non-Class Rares
 ItemDisplay[((RARE !(CL1 OR CL2 OR CL4 OR CL5 OR CL6 OR CL7 OR WP11 OR WP12 OR WP13)) ID)]: %NAME%
 
-/⃓̲ Crafted Items
+// Runewords
+ItemDisplay[RW]: %NAME%
+
+// Crafted Items
 ItemDisplay[ID !(NMAG OR MAG OR RARE) ILVL>69]: %GRAY%[L%ILVL%] %ORANGE%%NAME%
 
 
-/⃓̲ ┌─────────────────────────────┐
-/⃓̲═╡ Magic Items  (unidentified) ╞═══════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └─────────────────────────────┘
-/⃓̲ Popular Recipe Ingredients
+// ┌─────────────────────────────┐
+//═╡ Magic Items  (unidentified) ╞═══════════════════════════════════════════════════════════════════════════════════════
+// └─────────────────────────────┘
+// Popular Recipe Ingredients
 ItemDisplay[MAG !ID ILVL>47 (vgl OR xvg OR uvg OR tbt OR xtb OR utb OR zmb OR umc OR lbt OR xlb OR ulb OR zvb OR uvc OR mgl OR xmg OR umg)]: %NAME% %ORANGE%*
 
-/⃓̲ Catchall
-ItemDisplay[MAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
-ItemDisplay[MAG ETH]: %GRAY%eth %BLUE%%NAME%%CONTINUE%
+// Catchall
 ItemDisplay[MAG !ID]: %NAME%
 
 
-/⃓̲ ┌────────────────────────────┐
-/⃓̲═╡ Rare Items  (unidentified) ╞════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └────────────────────────────┘
-/⃓̲ Modification: Ethereal
+// ┌────────────────────────────┐
+//═╡ Rare Items  (unidentified) ╞════════════════════════════════════════════════════════════════════════════════════════
+// └────────────────────────────┘
+// Modification: Ethereal
 ItemDisplay[RARE !ID ETH]: %GRAY%eth %YELLOW%%NAME%%CONTINUE%
 
-/⃓̲ Highlighting
-/⃓̲    +2-skill-capable Circlets, Class Helms
-/⃓̲    gloves, boots
-/⃓̲    highest-IAS-capable weapons  (for character builds that benefit from attack speed more than regular weapon damage)
+// Highlighting
+//    +2-skill-capable Circlets, Class Helms
+//    gloves, boots
+//    highest-IAS-capable weapons
 ItemDisplay[RARE !ID ILVL>49 ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71) OR CL1 OR CL2)]:	 %NAME% 	
 ItemDisplay[RARE !ID ILVL>36 ((EQ4 ILVL>42) OR EQ5)]:	 %NAME% 	
-ItemDisplay[RARE !ID ILVL>55 (rxb OR 8rx OR 6rx OR crs OR 9cr OR 7cr OR mpi OR 9mp OR 7mp OR wsc OR 9wc OR 7wc OR wsp OR 9ws OR 7ws)]:	 %NAME% 	
+ItemDisplay[RARE !ID ILVL>55 (rxb OR 8rx OR 6rx OR crs OR 9cr OR 7cr OR mpi OR 9mp OR 7mp OR wsc OR 9wc OR 7wc OR wsp OR 9ws OR 7ws OR gax OR 9ga OR 7ga)]:	 %NAME% 	
 
-/⃓̲ Catchall
+// Catchall
 ItemDisplay[RARE !ID]: %NAME%
 
 
-/⃓̲ ┌───────────────┐
-/⃓̲═╡ Regular Items ╞═════════════════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └───────────────┘
-/⃓̲ Hidden: Regular non-class items with no runeword useability - level 20
-/⃓̲    gloves, boots, belts
-/⃓̲    1-socket
+// ┌───────────────┐
+//═╡ Regular Items ╞═════════════════════════════════════════════════════════════════════════════════════════════════════
+// └───────────────┘
+// Hidden: Regular non-class items with no runeword useability - level 20
+//    gloves, boots, belts
+//    1-socket
 ItemDisplay[NMAG CLVL>19 (EQ4 OR EQ5 OR EQ6)]:
 ItemDisplay[NMAG CLVL>19 !(CL1 OR CL2 OR CL4 OR CL5 OR CL6 OR WP11 OR WP12 OR WP13) SOCK=1]:
 
-/⃓̲ Hidden: Skill-Capable Items without skills  (ilvl 10+)
-/⃓̲    GROUP			EXCEPTIONS							LEVEL
-/⃓̲    scepters			4+ socket non-eth, 5-socket eth elite				10
-/⃓̲    staves			eth 4+ socket-capable elite					10
+// Hidden: Skill-Capable Items without skills  (ilvl 10+)
+//    GROUP			EXCEPTIONS							LEVEL
+//    scepters			4+ socket non-eth, 5-socket-capable eth elite			10
+//    staves			eth 4+ socket-capable elite					10
 ItemDisplay[(NMAG ILVL>9) (CL5 (SK261=0 SK262=0 SK263=0 SK264=0 SK265=0 SK266=0 SK267=0 SK268=0 SK269=0 SK270=0 SK271=0 SK272=0 SK273=0 SK274=0 SK275=0 SK276=0 SK277=0 SK278=0 SK279=0 SK280=0))]:
 ItemDisplay[(NMAG ILVL>9) (CL2 (SK126=0 SK127=0 SK128=0 SK129=0 SK130=0 SK131=0 SK132=0 SK133=0 SK134=0 SK135=0 SK136=0 SK137=0 SK138=0 SK139=0 SK140=0 SK141=0 SK142=0 SK143=0 SK144=0 SK145=0 SK146=0 SK147=0 SK148=0 SK149=0 SK150=0 SK151=0 SK152=0 SK153=0 SK154=0 SK155=0))]:
 ItemDisplay[(NMAG ILVL>9) (CL1 (SK221=0 SK222=0 SK223=0 SK224=0 SK225=0 SK226=0 SK227=0 SK228=0 SK229=0 SK230=0 SK231=0 SK232=0 SK233=0 SK234=0 SK235=0 SK236=0 SK237=0 SK238=0 SK239=0 SK240=0 SK241=0 SK242=0 SK243=0 SK244=0 SK245=0 SK246=0 SK247=0 SK248=0 SK249=0 SK250=0))]:
@@ -286,10 +263,10 @@ ItemDisplay[(NMAG ILVL>9) ((WP12 OR CL4) (SK66=0 SK67=0 SK68=0 SK69=0 SK70=0 SK7
 ItemDisplay[(NMAG ILVL>9) ((WP13 !((SOCK>3 !ETH) OR (7ws ETH (SOCK>4 OR SOCK=0))) (SK96=0 SK97=0 SK98=0 SK99=0 SK100=0 SK101=0 SK102=0 SK103=0 SK104=0 SK105=0 SK106=0 SK107=0 SK108=0 SK109=0 SK110=0 SK111=0 SK112=0 SK113=0 SK114=0 SK115=0 SK116=0 SK117=0 SK118=0 SK119=0 SK120=0 SK121=0 SK122=0 SK123=0 SK124=0 SK125=0))]:
 ItemDisplay[(NMAG ILVL>9) ((CL6 OR (WP11 !(ETH (6cs OR 6bs OR 6ws)))) (SK36=0 SK37=0 SK38=0 SK39=0 SK40=0 SK41=0 SK42=0 SK43=0 SK44=0 SK45=0 SK46=0 SK47=0 SK48=0 SK49=0 SK50=0 SK51=0 SK52=0 SK53=0 SK54=0 SK55=0 SK56=0 SK57=0 SK58=0 SK59=0 SK60=0 SK61=0 SK62=0 SK63=0 SK64=0 SK65=0))]:
 
-/⃓̲ Modification: Emphasize nearly-superior elite socketable armor - level 40+
-ItemDisplay[NMAG CLVL>39 (ELT (EQ1 OR EQ2 OR EQ3) !(SUP OR ETH)) ((uap DEF>139) OR (uhm DEF>151) OR (urn DEF>154) OR (usk DEF>156) OR (uh9 DEF>162) OR (uit DEF>146) OR (ush DEF>171) OR (urg DEF>133) OR (upk DEF>161) OR (uow DEF>159) OR (uts DEF>168) OR (uui DEF>458) OR (uea DEF>461) OR (ula DEF>465) OR (utu DEF>471) OR (urs DEF>490) OR (utp DEF>511) OR (ung DEF>484) OR (ucl DEF>491) OR (uhn DEF>500) OR (upl DEF>512) OR (uld DEF>518) OR (ult DEF>525) OR (uth DEF>536) OR (uul DEF>552) OR (uar DEF>594))]: %NAME% +%CONTINUE%
+// Modification: Emphasize nearly-superior elite socketable armor
+ItemDisplay[NMAG (ELT (EQ1 OR EQ2 OR EQ3) !(SUP OR ETH)) ((uap DEF>139) OR (uhm DEF>151) OR (urn DEF>154) OR (usk DEF>156) OR (uh9 DEF>162) OR (uit DEF>146) OR (ush DEF>171) OR (urg DEF>133) OR (upk DEF>161) OR (uow DEF>159) OR (uts DEF>168) OR (uui DEF>458) OR (uea DEF>461) OR (ula DEF>465) OR (utu DEF>471) OR (urs DEF>490) OR (utp DEF>511) OR (ung DEF>484) OR (ucl DEF>491) OR (uhn DEF>500) OR (upl DEF>512) OR (uld DEF>518) OR (ult DEF>525) OR (uth DEF>536) OR (uul DEF>552) OR (uar DEF>594))]: %NAME% +%CONTINUE%
 
-/⃓̲ Modification: Ethereal/Superior/Sockets
+// Modification: Ethereal/Superior/Sockets
 ItemDisplay[NMAG ETH]: %GRAY%%NAME%%CONTINUE%
 ItemDisplay[NMAG ED>0]: %NAME% %BLUE%+%CONTINUE%
 ItemDisplay[ED=15 NMAG]: %NAME%15%CONTINUE%
@@ -306,41 +283,42 @@ ItemDisplay[ED=5 NMAG]: %NAME%5%CONTINUE%
 ItemDisplay[NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
 ItemDisplay[NMAG !ETH]: %WHITE%%NAME%%CONTINUE%
 
-/⃓̲ Highlighting
-/⃓̲    eth armor with high defense: heavy 800+, medium 750+, light 700+
-/⃓̲    4-5 socket eth: Thresher, Giant Thresher
-/⃓̲    5 socket: sup/eth Berserker Axe, sup Phase Blade, eth Colossus Blade
-ItemDisplay[NMAG (((((7wa OR 7cr) (ETH OR ED>0)) OR (7gd ETH)) SOCK=5) OR ((7s8 OR 7wc) ETH (SOCK>3 SOCK<6)) OR (EQ2 (DEF>799 OR ((ITEMSTAT67>0 !(ucl OR ult OR uul)) DEF>749) OR (ITEMSTAT67=0 DEF>699))))]:	  %NAME%  %DGREEN%
+// Highlighting
+//    eth armor with high defense: heavy 800+, medium 750+, light 700+
+//    sup & eth: non-class elite melee weapons
+//    4-5 socket eth: Thresher, Giant Thresher
+//    5 socket: sup/eth Berserker Axe, sup Phase Blade, eth Colossus Blade
+ItemDisplay[NMAG (((WP1 OR WP2 OR WP3 OR WP7 OR WP8) ELT ETH ED>0) OR ((((7wa OR 7cr) (ETH OR ED>0)) OR (7gd ETH)) SOCK=5) OR ((7s8 OR 7wc) ETH (SOCK>3 SOCK<6)) OR (EQ2 (DEF>799 OR ((ITEMSTAT67>0 !(ucl OR ult OR uul)) DEF>749) OR (ITEMSTAT67=0 DEF>699))))]:	 %NAME% 	
 
-/⃓̲ Catchall - Regular Non-Class-Related Items
+// Catchall - Regular Non-Class-Related Items
 ItemDisplay[NMAG !(CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7 OR WP11 OR WP12 OR WP13)]: %NAME%
 
 
-/⃓̲ ┌─────────────────────┐
-/⃓̲═╡ Regular Class Items ╞═══════════════════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └─────────────────────┘
-/⃓̲ Modification: Pointmod Details
-/⃓̲    Space
+// ┌─────────────────────┐
+//═╡ Regular Class Items ╞═══════════════════════════════════════════════════════════════════════════════════════════════
+// └─────────────────────┘
+// Modification: Pointmod Details
+//    Space
 ItemDisplay[(NMAG (CL5 (SK261>0 OR SK262>0 OR SK263>0 OR SK264>0 OR SK265>0 OR SK266>0 OR SK267>0 OR SK268>0 OR SK269>0 OR SK270>0 OR SK271>0 OR SK272>0 OR SK273>0 OR SK274>0 OR SK275>0 OR SK276>0 OR SK277>0 OR SK278>0 OR SK279>0 OR SK280>0)))]: %NAME% %TAN%%CONTINUE%
 ItemDisplay[(NMAG (CL2 (SK126>0 OR SK127>0 OR SK128>0 OR SK129>0 OR SK130>0 OR SK131>0 OR SK132>0 OR SK133>0 OR SK134>0 OR SK135>0 OR SK136>0 OR SK137>0 OR SK138>0 OR SK139>0 OR SK140>0 OR SK141>0 OR SK142>0 OR SK143>0 OR SK144>0 OR SK145>0 OR SK146>0 OR SK147>0 OR SK148>0 OR SK149>0 OR SK150>0 OR SK151>0 OR SK152>0 OR SK153>0 OR SK154>0 OR SK155>0)))]: %NAME% %TAN%%CONTINUE%
 ItemDisplay[(NMAG (CL1 (SK221>0 OR SK222>0 OR SK223>0 OR SK224>0 OR SK225>0 OR SK226>0 OR SK227>0 OR SK228>0 OR SK229>0 OR SK230>0 OR SK231>0 OR SK232>0 OR SK233>0 OR SK234>0 OR SK235>0 OR SK236>0 OR SK237>0 OR SK238>0 OR SK239>0 OR SK240>0 OR SK241>0 OR SK242>0 OR SK243>0 OR SK244>0 OR SK245>0 OR SK246>0 OR SK247>0 OR SK248>0 OR SK249>0 OR SK250>0)))]: %NAME% %TAN%%CONTINUE%
 ItemDisplay[(NMAG ((CL4 OR WP12) (SK66>0 OR SK67>0 OR SK68>0 OR SK69>0 OR SK70>0 OR SK71>0 OR SK72>0 OR SK73>0 OR SK74>0 OR SK75>0 OR SK76>0 OR SK77>0 OR SK78>0 OR SK79>0 OR SK80>0 OR SK81>0 OR SK82>0 OR SK83>0 OR SK84>0 OR SK85>0 OR SK86>0 OR SK87>0 OR SK88>0 OR SK89>0 OR SK90>0 OR SK91>0 OR SK92>0 OR SK93>0 OR SK94>0 OR SK95>0)))]: %NAME% %TAN%%CONTINUE%
 ItemDisplay[(NMAG (WP13 (SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR SK101>0 OR SK102>0 OR SK103>0 OR SK104>0 OR SK105>0 OR SK106>0 OR SK107>0 OR SK108>0 OR SK109>0 OR SK110>0 OR SK111>0 OR SK112>0 OR SK113>0 OR SK114>0 OR SK115>0 OR SK116>0 OR SK117>0 OR SK118>0 OR SK119>0 OR SK120>0 OR SK121>0 OR SK122>0 OR SK123>0 OR SK124>0 OR SK125>0)))]: %NAME% %TAN%%CONTINUE%
 ItemDisplay[(NMAG ((CL6 OR WP11) (SK36>0 OR SK37>0 OR SK38>0 OR SK39>0 OR SK40>0 OR SK41>0 OR SK42>0 OR SK43>0 OR SK44>0 OR SK45>0 OR SK46>0 OR SK47>0 OR SK48>0 OR SK49>0 OR SK50>0 OR SK51>0 OR SK52>0 OR SK53>0 OR SK54>0 OR SK55>0 OR SK56>0 OR SK57>0 OR SK58>0 OR SK59>0 OR SK60>0 OR SK61>0 OR SK62>0 OR SK63>0 OR SK64>0 OR SK65>0)))]: %NAME% %TAN%%CONTINUE%
-/⃓̲    Amplitude  (value of highest pointmod, if above +1)
-ItemDisplay[(NMAG (CL5 (SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK279>2 OR SK280>2)))]: %NAME%%TAN%+3 %CONTINUE%
-ItemDisplay[(NMAG (CL2 (SK126>2 OR SK127>2 OR SK128>2 OR SK129>2 OR SK130>2 OR SK131>2 OR SK132>2 OR SK133>2 OR SK134>2 OR SK135>2 OR SK136>2 OR SK137>2 OR SK138>2 OR SK139>2 OR SK140>2 OR SK141>2 OR SK142>2 OR SK143>2 OR SK144>2 OR SK145>2 OR SK146>2 OR SK147>2 OR SK148>2 OR SK149>2 OR SK150>2 OR SK151>2 OR SK152>2 OR SK153>2 OR SK154>2 OR SK155>2)))]: %NAME%%TAN%+3 %CONTINUE%
-ItemDisplay[(NMAG (CL1 (SK221>2 OR SK222>2 OR SK223>2 OR SK224>2 OR SK225>2 OR SK226>2 OR SK227>2 OR SK228>2 OR SK229>2 OR SK230>2 OR SK231>2 OR SK232>2 OR SK233>2 OR SK234>2 OR SK235>2 OR SK236>2 OR SK237>2 OR SK238>2 OR SK239>2 OR SK240>2 OR SK241>2 OR SK242>2 OR SK243>2 OR SK244>2 OR SK245>2 OR SK246>2 OR SK247>2 OR SK248>2 OR SK249>2 OR SK250>2)))]: %NAME%%TAN%+3 %CONTINUE%
-ItemDisplay[(NMAG ((CL4 OR WP12) (SK66>2 OR SK67>2 OR SK68>2 OR SK69>2 OR SK70>2 OR SK71>2 OR SK72>2 OR SK73>2 OR SK74>2 OR SK75>2 OR SK76>2 OR SK77>2 OR SK78>2 OR SK79>2 OR SK80>2 OR SK81>2 OR SK82>2 OR SK83>2 OR SK84>2 OR SK85>2 OR SK86>2 OR SK87>2 OR SK88>2 OR SK89>2 OR SK90>2 OR SK91>2 OR SK92>2 OR SK93>2 OR SK94>2 OR SK95>2)))]: %NAME%%TAN%+3 %CONTINUE%
-ItemDisplay[(NMAG (WP13 (SK96>2 OR SK97>2 OR SK98>2 OR SK99>2 OR SK100>2 OR SK101>2 OR SK102>2 OR SK103>2 OR SK104>2 OR SK105>2 OR SK106>2 OR SK107>2 OR SK108>2 OR SK109>2 OR SK110>2 OR SK111>2 OR SK112>2 OR SK113>2 OR SK114>2 OR SK115>2 OR SK116>2 OR SK117>2 OR SK118>2 OR SK119>2 OR SK120>2 OR SK121>2 OR SK122>2 OR SK123>2 OR SK124>2 OR SK125>2)))]: %NAME%%TAN%+3 %CONTINUE%
-ItemDisplay[(NMAG ((CL6 OR WP11) (SK36>2 OR SK37>2 OR SK38>2 OR SK39>2 OR SK40>2 OR SK41>2 OR SK42>2 OR SK43>2 OR SK44>2 OR SK45>2 OR SK46>2 OR SK47>2 OR SK48>2 OR SK49>2 OR SK50>2 OR SK51>2 OR SK52>2 OR SK53>2 OR SK54>2 OR SK55>2 OR SK56>2 OR SK57>2 OR SK58>2 OR SK59>2 OR SK60>2 OR SK61>2 OR SK62>2 OR SK63>2 OR SK64>2 OR SK65>2)))]: %NAME%%TAN%+3 %CONTINUE%
-ItemDisplay[(NMAG (CL5 (SK261>1 OR SK262>1 OR SK263>1 OR SK264>1 OR SK265>1 OR SK266>1 OR SK267>1 OR SK268>1 OR SK269>1 OR SK270>1 OR SK271>1 OR SK272>1 OR SK273>1 OR SK274>1 OR SK275>1 OR SK276>1 OR SK277>1 OR SK278>1 OR SK279>1 OR SK280>1) !(SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK279>2 OR SK280>2)))]: %NAME%%TAN%+2 %CONTINUE%
-ItemDisplay[(NMAG (CL2 (SK126>1 OR SK127>1 OR SK128>1 OR SK129>1 OR SK130>1 OR SK131>1 OR SK132>1 OR SK133>1 OR SK134>1 OR SK135>1 OR SK136>1 OR SK137>1 OR SK138>1 OR SK139>1 OR SK140>1 OR SK141>1 OR SK142>1 OR SK143>1 OR SK144>1 OR SK145>1 OR SK146>1 OR SK147>1 OR SK148>1 OR SK149>1 OR SK150>1 OR SK151>1 OR SK152>1 OR SK153>1 OR SK154>1 OR SK155>1) !(SK126>2 OR SK127>2 OR SK128>2 OR SK129>2 OR SK130>2 OR SK131>2 OR SK132>2 OR SK133>2 OR SK134>2 OR SK135>2 OR SK136>2 OR SK137>2 OR SK138>2 OR SK139>2 OR SK140>2 OR SK141>2 OR SK142>2 OR SK143>2 OR SK144>2 OR SK145>2 OR SK146>2 OR SK147>2 OR SK148>2 OR SK149>2 OR SK150>2 OR SK151>2 OR SK152>2 OR SK153>2 OR SK154>2 OR SK155>2)))]: %NAME%%TAN%+2 %CONTINUE%
-ItemDisplay[(NMAG (CL1 (SK221>1 OR SK222>1 OR SK223>1 OR SK224>1 OR SK225>1 OR SK226>1 OR SK227>1 OR SK228>1 OR SK229>1 OR SK230>1 OR SK231>1 OR SK232>1 OR SK233>1 OR SK234>1 OR SK235>1 OR SK236>1 OR SK237>1 OR SK238>1 OR SK239>1 OR SK240>1 OR SK241>1 OR SK242>1 OR SK243>1 OR SK244>1 OR SK245>1 OR SK246>1 OR SK247>1 OR SK248>1 OR SK249>1 OR SK250>1) !(SK221>2 OR SK222>2 OR SK223>2 OR SK224>2 OR SK225>2 OR SK226>2 OR SK227>2 OR SK228>2 OR SK229>2 OR SK230>2 OR SK231>2 OR SK232>2 OR SK233>2 OR SK234>2 OR SK235>2 OR SK236>2 OR SK237>2 OR SK238>2 OR SK239>2 OR SK240>2 OR SK241>2 OR SK242>2 OR SK243>2 OR SK244>2 OR SK245>2 OR SK246>2 OR SK247>2 OR SK248>2 OR SK249>2 OR SK250>2)))]: %NAME%%TAN%+2 %CONTINUE%
-ItemDisplay[(NMAG ((CL4 OR WP12) (SK66>1 OR SK67>1 OR SK68>1 OR SK69>1 OR SK70>1 OR SK71>1 OR SK72>1 OR SK73>1 OR SK74>1 OR SK75>1 OR SK76>1 OR SK77>1 OR SK78>1 OR SK79>1 OR SK80>1 OR SK81>1 OR SK82>1 OR SK83>1 OR SK84>1 OR SK85>1 OR SK86>1 OR SK87>1 OR SK88>1 OR SK89>1 OR SK90>1 OR SK91>1 OR SK92>1 OR SK93>1 OR SK94>1 OR SK95>1) !(SK66>2 OR SK67>2 OR SK68>2 OR SK69>2 OR SK70>2 OR SK71>2 OR SK72>2 OR SK73>2 OR SK74>2 OR SK75>2 OR SK76>2 OR SK77>2 OR SK78>2 OR SK79>2 OR SK80>2 OR SK81>2 OR SK82>2 OR SK83>2 OR SK84>2 OR SK85>2 OR SK86>2 OR SK87>2 OR SK88>2 OR SK89>2 OR SK90>2 OR SK91>2 OR SK92>2 OR SK93>2 OR SK94>2 OR SK95>2)))]: %NAME%%TAN%+2 %CONTINUE%
-ItemDisplay[(NMAG (WP13 (SK96>1 OR SK97>1 OR SK98>1 OR SK99>1 OR SK100>1 OR SK101>1 OR SK102>1 OR SK103>1 OR SK104>1 OR SK105>1 OR SK106>1 OR SK107>1 OR SK108>1 OR SK109>1 OR SK110>1 OR SK111>1 OR SK112>1 OR SK113>1 OR SK114>1 OR SK115>1 OR SK116>1 OR SK117>1 OR SK118>1 OR SK119>1 OR SK120>1 OR SK121>1 OR SK122>1 OR SK123>1 OR SK124>1 OR SK125>1) !(SK96>2 OR SK97>2 OR SK98>2 OR SK99>2 OR SK100>2 OR SK101>2 OR SK102>2 OR SK103>2 OR SK104>2 OR SK105>2 OR SK106>2 OR SK107>2 OR SK108>2 OR SK109>2 OR SK110>2 OR SK111>2 OR SK112>2 OR SK113>2 OR SK114>2 OR SK115>2 OR SK116>2 OR SK117>2 OR SK118>2 OR SK119>2 OR SK120>2 OR SK121>2 OR SK122>2 OR SK123>2 OR SK124>2 OR SK125>2)))]: %NAME%%TAN%+2 %CONTINUE%
-ItemDisplay[(NMAG ((CL6 OR WP11) (SK36>1 OR SK37>1 OR SK38>1 OR SK39>1 OR SK40>1 OR SK41>1 OR SK42>1 OR SK43>1 OR SK44>1 OR SK45>1 OR SK46>1 OR SK47>1 OR SK48>1 OR SK49>1 OR SK50>1 OR SK51>1 OR SK52>1 OR SK53>1 OR SK54>1 OR SK55>1 OR SK56>1 OR SK57>1 OR SK58>1 OR SK59>1 OR SK60>1 OR SK61>1 OR SK62>1 OR SK63>1 OR SK64>1 OR SK65>1) !(SK36>2 OR SK37>2 OR SK38>2 OR SK39>2 OR SK40>2 OR SK41>2 OR SK42>2 OR SK43>2 OR SK44>2 OR SK45>2 OR SK46>2 OR SK47>2 OR SK48>2 OR SK49>2 OR SK50>2 OR SK51>2 OR SK52>2 OR SK53>2 OR SK54>2 OR SK55>2 OR SK56>2 OR SK57>2 OR SK58>2 OR SK59>2 OR SK60>2 OR SK61>2 OR SK62>2 OR SK63>2 OR SK64>2 OR SK65>2)))]: %NAME%%TAN%+2 %CONTINUE%
-/⃓̲    Amount  (one tally per pointmod)
+//    Amplitude  (value of highest pointmod, if above +1)
+ItemDisplay[(NMAG (CL5 (SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK279>2 OR SK280>2)))]: %NAME%+3 %CONTINUE%
+ItemDisplay[(NMAG (CL2 (SK126>2 OR SK127>2 OR SK128>2 OR SK129>2 OR SK130>2 OR SK131>2 OR SK132>2 OR SK133>2 OR SK134>2 OR SK135>2 OR SK136>2 OR SK137>2 OR SK138>2 OR SK139>2 OR SK140>2 OR SK141>2 OR SK142>2 OR SK143>2 OR SK144>2 OR SK145>2 OR SK146>2 OR SK147>2 OR SK148>2 OR SK149>2 OR SK150>2 OR SK151>2 OR SK152>2 OR SK153>2 OR SK154>2 OR SK155>2)))]: %NAME%+3 %CONTINUE%
+ItemDisplay[(NMAG (CL1 (SK221>2 OR SK222>2 OR SK223>2 OR SK224>2 OR SK225>2 OR SK226>2 OR SK227>2 OR SK228>2 OR SK229>2 OR SK230>2 OR SK231>2 OR SK232>2 OR SK233>2 OR SK234>2 OR SK235>2 OR SK236>2 OR SK237>2 OR SK238>2 OR SK239>2 OR SK240>2 OR SK241>2 OR SK242>2 OR SK243>2 OR SK244>2 OR SK245>2 OR SK246>2 OR SK247>2 OR SK248>2 OR SK249>2 OR SK250>2)))]: %NAME%+3 %CONTINUE%
+ItemDisplay[(NMAG ((CL4 OR WP12) (SK66>2 OR SK67>2 OR SK68>2 OR SK69>2 OR SK70>2 OR SK71>2 OR SK72>2 OR SK73>2 OR SK74>2 OR SK75>2 OR SK76>2 OR SK77>2 OR SK78>2 OR SK79>2 OR SK80>2 OR SK81>2 OR SK82>2 OR SK83>2 OR SK84>2 OR SK85>2 OR SK86>2 OR SK87>2 OR SK88>2 OR SK89>2 OR SK90>2 OR SK91>2 OR SK92>2 OR SK93>2 OR SK94>2 OR SK95>2)))]: %NAME%+3 %CONTINUE%
+ItemDisplay[(NMAG (WP13 (SK96>2 OR SK97>2 OR SK98>2 OR SK99>2 OR SK100>2 OR SK101>2 OR SK102>2 OR SK103>2 OR SK104>2 OR SK105>2 OR SK106>2 OR SK107>2 OR SK108>2 OR SK109>2 OR SK110>2 OR SK111>2 OR SK112>2 OR SK113>2 OR SK114>2 OR SK115>2 OR SK116>2 OR SK117>2 OR SK118>2 OR SK119>2 OR SK120>2 OR SK121>2 OR SK122>2 OR SK123>2 OR SK124>2 OR SK125>2)))]: %NAME%+3 %CONTINUE%
+ItemDisplay[(NMAG ((CL6 OR WP11) (SK36>2 OR SK37>2 OR SK38>2 OR SK39>2 OR SK40>2 OR SK41>2 OR SK42>2 OR SK43>2 OR SK44>2 OR SK45>2 OR SK46>2 OR SK47>2 OR SK48>2 OR SK49>2 OR SK50>2 OR SK51>2 OR SK52>2 OR SK53>2 OR SK54>2 OR SK55>2 OR SK56>2 OR SK57>2 OR SK58>2 OR SK59>2 OR SK60>2 OR SK61>2 OR SK62>2 OR SK63>2 OR SK64>2 OR SK65>2)))]: %NAME%+3 %CONTINUE%
+ItemDisplay[(NMAG (CL5 (SK261>1 OR SK262>1 OR SK263>1 OR SK264>1 OR SK265>1 OR SK266>1 OR SK267>1 OR SK268>1 OR SK269>1 OR SK270>1 OR SK271>1 OR SK272>1 OR SK273>1 OR SK274>1 OR SK275>1 OR SK276>1 OR SK277>1 OR SK278>1 OR SK279>1 OR SK280>1) !(SK261>2 OR SK262>2 OR SK263>2 OR SK264>2 OR SK265>2 OR SK266>2 OR SK267>2 OR SK268>2 OR SK269>2 OR SK270>2 OR SK271>2 OR SK272>2 OR SK273>2 OR SK274>2 OR SK275>2 OR SK276>2 OR SK277>2 OR SK278>2 OR SK279>2 OR SK280>2)))]: %NAME%+2 %CONTINUE%
+ItemDisplay[(NMAG (CL2 (SK126>1 OR SK127>1 OR SK128>1 OR SK129>1 OR SK130>1 OR SK131>1 OR SK132>1 OR SK133>1 OR SK134>1 OR SK135>1 OR SK136>1 OR SK137>1 OR SK138>1 OR SK139>1 OR SK140>1 OR SK141>1 OR SK142>1 OR SK143>1 OR SK144>1 OR SK145>1 OR SK146>1 OR SK147>1 OR SK148>1 OR SK149>1 OR SK150>1 OR SK151>1 OR SK152>1 OR SK153>1 OR SK154>1 OR SK155>1) !(SK126>2 OR SK127>2 OR SK128>2 OR SK129>2 OR SK130>2 OR SK131>2 OR SK132>2 OR SK133>2 OR SK134>2 OR SK135>2 OR SK136>2 OR SK137>2 OR SK138>2 OR SK139>2 OR SK140>2 OR SK141>2 OR SK142>2 OR SK143>2 OR SK144>2 OR SK145>2 OR SK146>2 OR SK147>2 OR SK148>2 OR SK149>2 OR SK150>2 OR SK151>2 OR SK152>2 OR SK153>2 OR SK154>2 OR SK155>2)))]: %NAME%+2 %CONTINUE%
+ItemDisplay[(NMAG (CL1 (SK221>1 OR SK222>1 OR SK223>1 OR SK224>1 OR SK225>1 OR SK226>1 OR SK227>1 OR SK228>1 OR SK229>1 OR SK230>1 OR SK231>1 OR SK232>1 OR SK233>1 OR SK234>1 OR SK235>1 OR SK236>1 OR SK237>1 OR SK238>1 OR SK239>1 OR SK240>1 OR SK241>1 OR SK242>1 OR SK243>1 OR SK244>1 OR SK245>1 OR SK246>1 OR SK247>1 OR SK248>1 OR SK249>1 OR SK250>1) !(SK221>2 OR SK222>2 OR SK223>2 OR SK224>2 OR SK225>2 OR SK226>2 OR SK227>2 OR SK228>2 OR SK229>2 OR SK230>2 OR SK231>2 OR SK232>2 OR SK233>2 OR SK234>2 OR SK235>2 OR SK236>2 OR SK237>2 OR SK238>2 OR SK239>2 OR SK240>2 OR SK241>2 OR SK242>2 OR SK243>2 OR SK244>2 OR SK245>2 OR SK246>2 OR SK247>2 OR SK248>2 OR SK249>2 OR SK250>2)))]: %NAME%+2 %CONTINUE%
+ItemDisplay[(NMAG ((CL4 OR WP12) (SK66>1 OR SK67>1 OR SK68>1 OR SK69>1 OR SK70>1 OR SK71>1 OR SK72>1 OR SK73>1 OR SK74>1 OR SK75>1 OR SK76>1 OR SK77>1 OR SK78>1 OR SK79>1 OR SK80>1 OR SK81>1 OR SK82>1 OR SK83>1 OR SK84>1 OR SK85>1 OR SK86>1 OR SK87>1 OR SK88>1 OR SK89>1 OR SK90>1 OR SK91>1 OR SK92>1 OR SK93>1 OR SK94>1 OR SK95>1) !(SK66>2 OR SK67>2 OR SK68>2 OR SK69>2 OR SK70>2 OR SK71>2 OR SK72>2 OR SK73>2 OR SK74>2 OR SK75>2 OR SK76>2 OR SK77>2 OR SK78>2 OR SK79>2 OR SK80>2 OR SK81>2 OR SK82>2 OR SK83>2 OR SK84>2 OR SK85>2 OR SK86>2 OR SK87>2 OR SK88>2 OR SK89>2 OR SK90>2 OR SK91>2 OR SK92>2 OR SK93>2 OR SK94>2 OR SK95>2)))]: %NAME%+2 %CONTINUE%
+ItemDisplay[(NMAG (WP13 (SK96>1 OR SK97>1 OR SK98>1 OR SK99>1 OR SK100>1 OR SK101>1 OR SK102>1 OR SK103>1 OR SK104>1 OR SK105>1 OR SK106>1 OR SK107>1 OR SK108>1 OR SK109>1 OR SK110>1 OR SK111>1 OR SK112>1 OR SK113>1 OR SK114>1 OR SK115>1 OR SK116>1 OR SK117>1 OR SK118>1 OR SK119>1 OR SK120>1 OR SK121>1 OR SK122>1 OR SK123>1 OR SK124>1 OR SK125>1) !(SK96>2 OR SK97>2 OR SK98>2 OR SK99>2 OR SK100>2 OR SK101>2 OR SK102>2 OR SK103>2 OR SK104>2 OR SK105>2 OR SK106>2 OR SK107>2 OR SK108>2 OR SK109>2 OR SK110>2 OR SK111>2 OR SK112>2 OR SK113>2 OR SK114>2 OR SK115>2 OR SK116>2 OR SK117>2 OR SK118>2 OR SK119>2 OR SK120>2 OR SK121>2 OR SK122>2 OR SK123>2 OR SK124>2 OR SK125>2)))]: %NAME%+2 %CONTINUE%
+ItemDisplay[(NMAG ((CL6 OR WP11) (SK36>1 OR SK37>1 OR SK38>1 OR SK39>1 OR SK40>1 OR SK41>1 OR SK42>1 OR SK43>1 OR SK44>1 OR SK45>1 OR SK46>1 OR SK47>1 OR SK48>1 OR SK49>1 OR SK50>1 OR SK51>1 OR SK52>1 OR SK53>1 OR SK54>1 OR SK55>1 OR SK56>1 OR SK57>1 OR SK58>1 OR SK59>1 OR SK60>1 OR SK61>1 OR SK62>1 OR SK63>1 OR SK64>1 OR SK65>1) !(SK36>2 OR SK37>2 OR SK38>2 OR SK39>2 OR SK40>2 OR SK41>2 OR SK42>2 OR SK43>2 OR SK44>2 OR SK45>2 OR SK46>2 OR SK47>2 OR SK48>2 OR SK49>2 OR SK50>2 OR SK51>2 OR SK52>2 OR SK53>2 OR SK54>2 OR SK55>2 OR SK56>2 OR SK57>2 OR SK58>2 OR SK59>2 OR SK60>2 OR SK61>2 OR SK62>2 OR SK63>2 OR SK64>2 OR SK65>2)))]: %NAME%+2 %CONTINUE%
+//    Amount  (one tally per pointmod)
 ItemDisplay[NMAG (SK36>0 OR SK66>0 OR SK96>0 OR SK126>0 OR SK221>0)]: %NAME%­%CONTINUE%
 ItemDisplay[NMAG (SK37>0 OR SK67>0 OR SK97>0 OR SK127>0 OR SK222>0)]: %NAME%­%CONTINUE%
 ItemDisplay[NMAG (SK38>0 OR SK68>0 OR SK98>0 OR SK128>0 OR SK223>0)]: %NAME%­%CONTINUE%
@@ -372,17 +350,29 @@ ItemDisplay[NMAG (SK63>0 OR SK93>0 OR SK123>0 OR SK153>0 OR SK248>0 OR SK278>0)]
 ItemDisplay[NMAG (SK64>0 OR SK94>0 OR SK124>0 OR SK154>0 OR SK249>0 OR SK279>0)]: %NAME%­%CONTINUE%
 ItemDisplay[NMAG (SK65>0 OR SK95>0 OR SK125>0 OR SK155>0 OR SK250>0 OR SK280>0)]: %NAME%­%CONTINUE%
 
-/⃓̲ Amazon Weapons
+// Highlighting: Potentially Valuable Pointmod Items
+ItemDisplay[NMAG ((CL5 !(9cs OR 7xf OR 7cs)) (SOCK>2 OR SOCK=0) (SK278>2 OR SK277>2 OR SK272>2 OR SK271>2 OR SK262>2 OR SK261>2 OR SK276>2 OR SK266>2 OR SK267>2))]:	  %NAME%  	
+ItemDisplay[NMAG (CL2 !SOCK=1 (SK151>0 OR SK147>0 OR SK149>2 OR SK154>2))]:	 %NAME% 	
+ItemDisplay[NMAG (CL1 !SOCK=1 (SK247>2 OR SK237>2 OR SK236>2 OR SK250>2 OR SK245>2 OR SK240>2 OR SK249>2 OR SK244>2 OR SK226>2 OR SK227>2))]:	  %NAME%  	
+ItemDisplay[NMAG !SOCK=1 (CL4 OR (WP12 !(wnd OR ywn OR 9wn))) (SK84>2 OR SK92>2 OR SK83>2 OR SK69>2 OR SK79>2 OR SK73>2 OR SK67>2)]:	  %NAME%  	
+ItemDisplay[NMAG (WP13 (SOCK>2 OR (SOCK=0 !(scp OR 9sc OR 7sc)))) (SK117>0 OR SK121>2 OR SK112>2 OR (SOCK=4 (SK118>2 OR (ELT (SK123>2 OR SK125>2 OR SK106>2 OR SK107>2)))))]:	  %NAME%  	
+ItemDisplay[NMAG CL6 ((SOCK>2 OR (SOCK=0 (ob5 OR oba OR obf))) (SK46>2 OR SK48>2 OR SK44>2 OR SK54>2 OR SK64>2 OR SK62>2 OR SK38>2 OR SK50>2))]:	  %NAME%  	
+ItemDisplay[NMAG (WP11 (SOCK=4 OR ((cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs) SOCK=0)) (SK58>2 OR (SK58>1 (SK49>1 OR SK50>0 OR SK60>0))))]:	  %NAME%  	
+ItemDisplay[NMAG ((WP11 (SOCK=2 OR (SOCK=0 (sst OR 8ss)))) (SK41>2 OR SK52>2 OR (SK61>0 (SK41>1 OR SK46>2 OR SK47>2 OR SK52>1))))]:	  %NAME%  	
+
+// Catchall - Pointmod Items
+ItemDisplay[NMAG !(CL7 OR CL3)]: %NAME%
+
+// Amazon Weapons
+ItemDisplay[NMAG CL7 ELT TABSK0>2 SOCK=4]:	 %NAME% %TAN%+3 %DGREEN%	// highlighting: 4-socket +3 elite bows
 ItemDisplay[NMAG CL7 (TABSK0>2 OR TABSK2>2)]: %NAME% %TAN%+3
 ItemDisplay[NMAG CL7 (TABSK0>1 OR TABSK2>1)]: %NAME% %TAN%+2
 ItemDisplay[NMAG CL7]: %NAME%
-/⃓̲    Highlighting: 4-socket +3 elite bows
-ItemDisplay[NMAG CL7 TABSK0>2 (SOCK=4)]:	  %NAME% %TAN%+3  %DGREEN%
 
-/⃓̲ Paladin Shields  (no pointmods)
-/⃓̲    0-socket text divider
+// Paladin Shields
+//    0-socket text divider
 ItemDisplay[NMAG CL3 ED>0 SOCK=0]: %NAME% %GRAY%­%CONTINUE%
-/⃓̲    Enhanced Damage
+//    Enhanced Damage
 ItemDisplay[NMAG ITEMSTAT18>64]: %NAME% %BLUE%+65
 ItemDisplay[NMAG ITEMSTAT18=64]: %NAME% %BLUE%+64
 ItemDisplay[NMAG ITEMSTAT18=63]: %NAME% %BLUE%+63
@@ -399,7 +389,7 @@ ItemDisplay[NMAG ITEMSTAT18>24]: %NAME% %BLUE%25+
 ItemDisplay[NMAG ITEMSTAT18>19]: %NAME% %BLUE%20+
 ItemDisplay[NMAG ITEMSTAT18>14]: %NAME% %BLUE%15+
 ItemDisplay[NMAG ITEMSTAT18>9]: %NAME% %BLUE%10+
-/⃓̲    Resistances
+//    Resistances
 ItemDisplay[NMAG RES>44]: %NAME% %BLUE%+45 Res
 ItemDisplay[NMAG RES=44]: %NAME% %BLUE%+44 Res
 ItemDisplay[NMAG RES=43]: %NAME% %BLUE%+43 Res
@@ -415,17 +405,14 @@ ItemDisplay[NMAG RES>9]: %NAME% %BLUE%10+ Res
 ItemDisplay[NMAG RES>4]: %NAME% %BLUE%5+ Res
 
 
-/⃓̲ ┌──────────────────────────────────┐
-/⃓̲═╡ Unique/Set Items  (unidentified) ╞══════════════════════════════════════════════════════════════════════════════════
-/⃓̲ └──────────────────────────────────┘
-/⃓̲ Special Properties
-/⃓̲    Shared Bases
-ItemDisplay[UNI ETH ((uar ILVL>86) OR (7gm ILVL>84) OR (7wh ILVL>82))]: %NAME% %GRAY%<%DGREEN%][%PURPLE%>%CONTINUE%
+// ┌──────────────────────────────────┐
+//═╡ Unique/Set Items  (unidentified) ╞══════════════════════════════════════════════════════════════════════════════════
+// └──────────────────────────────────┘
+// Special Properties
+//    Shared Bases
+ItemDisplay[UNI ETH ((uar ILVL>86) OR (7gm ILVL>84) OR (7wh ILVL>82) OR (uhm ILVL>76) OR (7fl ILVL>85) OR (7sc ILVL>79))]: %NAME% %GRAY%<%DGREEN%][%GRAY%>%CONTINUE%
 ItemDisplay[((UNI !ETH ((uhm ILVL>76) OR (7fl ILVL>85) OR (7sc ILVL>79) OR (7cr ILVL>86) OR (uar ILVL>86) OR (7gm ILVL>84) OR (7wh ILVL>82))) OR (SET ((cap ILVL>19) OR (tbl ILVL>20) OR (crn ILVL>22) OR (tgl ILVL>20) OR (mbl ILVL>27) OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))))))]: %NAME% %WHITE%<%DGREEN%][%WHITE%>%CONTINUE%
-ItemDisplay[UNI ETH ((uhm ILVL>76) OR (7fl ILVL>85) OR (7sc ILVL>79))]: %NAME% %GRAY%<%DGREEN%][%GRAY%>%CONTINUE%
-/⃓̲    Pseudo-Eth
-ItemDisplay[((UNI ETH (urn OR xla OR xpl OR uld OR uul OR uit OR uvb OR 9ax OR 9la OR 7ba OR 9gm OR 7sp OR 9cr OR 7b7 OR 7gd OR 7dg OR 7bl OR 7wc OR 9st OR 7p7 OR 7cs OR 7s7 OR 7gl OR 7ts OR ama OR 9tk OR 9ta OR 7bk OR 7b8)) OR (SET ETH (9vo OR 7ls)))]: %NAME% %PURPLE%>>%CONTINUE%
-/⃓̲    Natural Sockets
+//    Natural Sockets
 ItemDisplay[UNI upk]: %NAME% %GRAY%[1]%CONTINUE%
 ItemDisplay[((UNI (9fc OR bae OR xml OR 8s8 OR xng OR 6hx)) OR (SET (ba5 OR dr8 OR urn OR 7m7)))]: %NAME% %GRAY%[2]%CONTINUE%
 ItemDisplay[((UNI (ush OR 9st OR xul)) OR (SET (xar OR paf)))]: %NAME% %GRAY%[3]%CONTINUE%
@@ -435,24 +422,24 @@ ItemDisplay[((UNI 7o7) OR (SET 9mt))]: %NAME% %GRAY%[2-3]%CONTINUE%
 ItemDisplay[SET 7ws]: %NAME% %GRAY%[3-4]%CONTINUE%
 ItemDisplay[UNI 72a]: %NAME% %GRAY%[3-5]%CONTINUE%
 
-/⃓̲ Highlighting
-ItemDisplay[((UNI ((ETH (xh9 OR ulm OR usk)) OR (!ETH (jew OR cm1 OR cm2 OR xh9 OR uap OR ulm OR usk OR ci3 OR baa OR dra OR xea OR uui OR uit OR ulc OR 6lw OR 7gw OR obf OR obc OR (uar ILVL>86) OR (7gm ILVL>84) OR (uhm ILVL>76) OR (7cr ILVL>86) OR 7cr OR uhm)))) OR (SET (uar OR uth)))]:	         %NAME%         	
-ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR (uar ILVL>86) OR (7gm ILVL>84))) OR (!ETH ((amu ILVL>84) OR (rin ILVL>83) OR xhn OR upl OR pa9 OR uvg OR xtb OR xhb OR zhb OR 7wa OR nea)))]:	       %NAME%       	
-ItemDisplay[((UNI ((ETH (urn OR uit OR ama OR 7bk)) OR (!ETH ((amu ILVL>72) OR (rin ILVL>65) OR cm3 OR dre OR xlt OR uld OR pac OR ama OR 8lw OR (7wh ILVL>82) OR (7sc ILVL>79) OR 6cs)))) OR (SET ulg))]:	     %NAME%     	
-ItemDisplay[((UNI ((ETH (baa OR xhn OR xlt OR nea OR ulc OR 7b8)) OR (!ETH ((rin ILVL>38) OR ci2 OR bac OR xpl OR uow OR tgl OR hgl OR xvb OR xmb OR zlb OR zvb OR umc OR 7m7 OR 7kr OR 7s8 OR 7bk OR rxb OR 6ws OR oba OR urn OR (7fl ILVL>85) OR 7gd OR 7gm OR 7sc)))) OR (SET ((amu ILVL>25) OR xhm OR xtb OR xmg)))]:	    %NAME%    	
-ItemDisplay[((UNI ((ETH (dra OR pa9 OR zhb OR 6cs OR oba OR (7wh ILVL>82) OR uld OR uvb OR 7s8 OR 6ws OR xpl OR uap OR ci3)) OR (!ETH ((amu ILVL>57) OR xhm OR utu OR mgl OR uvb OR uhb OR ztb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR 9ls OR am7 OR xrs OR xtp OR uar OR 7fl)))) OR (SET 7qr))]:	   %NAME%   	
-ItemDisplay[((UNI ((ETH (ci2 OR uui OR upl OR uow OR pac OR uvg OR xvb OR xmb OR xtb OR zlb OR zvb OR 7wa OR 9st OR 7p7 OR 7s7 OR (7sc ILVL>79) OR 7sc OR 7o7 OR 7pa OR dgr OR 7gd OR (uhm ILVL>76) OR uhm OR 9fc OR xrs OR utu OR xea OR 7gm)) OR (!ETH (xsh OR nee OR nef OR umg OR uvc OR 7br OR 7p7 OR 7b8 OR 8lb OR 8sw OR 9tw OR 9fc OR 7o7 OR 7pa OR drb OR pae OR dgr OR 9bs OR umb OR 9mp OR 7wh)))) OR (SET (xap OR stu OR ult OR xhb OR ci3 OR zvb OR xmb OR ne9 OR utc OR oba OR xsk OR uhm OR uld OR amc OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))))))]:	  %NAME%  	
-ItemDisplay[((UNI ETH (9cr OR 7cs OR 7dg OR 7bl OR 7wc OR 7gl OR 7ts OR 9tk OR xkp OR xlm OR xrn OR bac OR xts OR xhb OR ztb OR 7sp OR 9ws OR 7ws OR 9tr OR 9ta OR 8ss OR 9wn OR 9bw OR 7bw OR 9tw OR 7br OR 7b7 OR 9bs OR 7kr OR 72a OR 7gi OR dre OR (7fl ILVL>85) OR 7fl OR 7m7 OR umb OR xhm OR umc OR uar OR 7wh)) OR (SET ((amu ILVL>16) OR xhl OR 7ls OR upl OR ci0 OR 6cs OR 7gd OR 7wd OR 7ma OR umc OR xml OR xvg OR ztb OR uul OR zhb OR xhg OR xtg OR xh9 OR uh9 OR xul OR vbt OR xar OR urn OR 7ws OR paf OR 7m7 OR ucl OR ba5 OR zmb)))]:	 %NAME% 	
-ItemDisplay[UNI !ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR xrn OR bad OR stu OR aar OR xui OR xar OR xit OR xts OR vgl OR xlg OR xvg OR xmg OR xtg OR uhg OR xlb OR lbl OR tbl OR zmb OR 9gi OR 7mp OR mau OR 9sp OR 9m9 OR 7sp OR 9sb OR 9cm OR 7gs OR bld OR 7dg OR 7wc OR 9tr OR 7sr OR am9 OR 7ta OR 6sw OR amb OR 8rx OR wst OR 8ss OR 8ls OR 8ws OR 9wn OR 9bw OR 7bw OR 7wb OR 7lw OR 9st OR uh9 OR bae OR xml OR upk OR ush OR 72a OR uts OR 8s8 OR 9fb OR 9gs OR 7ls OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 7ga OR 9pa OR 92h OR drd OR lbt OR 9gm OR plt OR xow OR gsd)]:	 %NAME% 	
+// Highlighting
+ItemDisplay[((UNI ((ETH (xh9 OR ulm OR usk)) OR (!ETH (jew OR cm1 OR cm2 OR xh9 OR uap OR ulm OR usk OR ci3 OR baa OR dra OR xea OR uui OR uit OR ulc OR 6lw OR 7gw OR obf OR obc OR (uar ILVL>86) OR (7gm ILVL>84) OR (uhm ILVL>76) OR (7cr ILVL>86) OR 7cr OR uhm)))) OR (SET (uar OR uth)))]:	         %NAME%%DGREEN%         	
+ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR (uar ILVL>86) OR (7gm ILVL>84))) OR (!ETH ((amu ILVL>84) OR (rin ILVL>83) OR xhn OR upl OR pa9 OR uvg OR xtb OR xhb OR zhb OR 7wa OR nea)))]:	       %NAME%%DGREEN%       	
+ItemDisplay[((UNI ((ETH (urn OR uit OR ama OR 7bk)) OR (!ETH ((amu ILVL>72) OR (rin ILVL>65) OR cm3 OR dre OR xlt OR uld OR pac OR ama OR 8lw OR (7wh ILVL>82) OR (7sc ILVL>79) OR 6cs OR oba)))) OR (SET ulg))]:	     %NAME%%DGREEN%     	
+ItemDisplay[((UNI ((ETH (baa OR xhn OR xlt OR nea OR ulc OR 7b8)) OR (!ETH ((rin ILVL>38) OR ci2 OR bac OR xpl OR uow OR tgl OR hgl OR xvb OR xmb OR zlb OR zvb OR umc OR 7m7 OR 7kr OR 7s8 OR 7bk OR rxb OR 6ws OR urn OR (7fl ILVL>85) OR 7gd OR 7gm OR 7sc)))) OR (SET ((amu ILVL>25) OR xhm OR xtb OR xmg)))]:	    %NAME%%DGREEN%    	
+ItemDisplay[((UNI ((ETH (dra OR pa9 OR zhb OR 6cs OR oba OR (7wh ILVL>82) OR uld OR uvb OR 7s8 OR 6ws OR xpl OR uap OR ci3)) OR (!ETH ((amu ILVL>57) OR xhm OR utu OR mgl OR uvb OR uhb OR ztb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR 9ls OR am7 OR xrs OR xtp OR uar OR 7fl)))) OR (SET 7qr))]:	   %NAME%%DGREEN%   	
+ItemDisplay[((UNI ((ETH (ci2 OR uui OR upl OR uow OR pac OR uvg OR xvb OR xmb OR xtb OR zlb OR zvb OR 7wa OR 9st OR 7p7 OR 7s7 OR (7sc ILVL>79) OR 7sc OR 7o7 OR 7pa OR dgr OR 7gd OR (uhm ILVL>76) OR uhm OR 9fc OR xrs OR utu OR xea OR 7gm)) OR (!ETH (xsh OR nee OR nef OR umg OR uvc OR 7br OR 7p7 OR 7b8 OR 8lb OR 8sw OR 9tw OR 9fc OR 7o7 OR 7pa OR drb OR pae OR dgr OR 9bs OR umb OR 9mp OR 7wh)))) OR (SET (xap OR stu OR ult OR xhb OR ci3 OR zvb OR xmb OR ne9 OR utc OR oba OR xsk OR uhm OR uld OR amc OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))))))]:	  %NAME%%DGREEN%  	
+ItemDisplay[((UNI ETH (9cr OR 7cs OR 7dg OR 7bl OR 7wc OR 7gl OR 7ts OR 9tk OR xkp OR xlm OR xrn OR bac OR xts OR xhb OR ztb OR 7sp OR 9ws OR 7ws OR 9tr OR 9ta OR 9wn OR 9bw OR 7bw OR 9tw OR 7br OR 7b7 OR 9bs OR 7kr OR 72a OR 7gi OR dre OR (7fl ILVL>85) OR 7fl OR 7m7 OR umb OR xhm OR umc OR uar OR 7wh)) OR (SET ((amu ILVL>16) OR xhl OR 7ls OR upl OR ci0 OR 6cs OR 7gd OR 7wd OR 7ma OR umc OR xml OR xvg OR ztb OR uul OR zhb OR xhg OR xtg OR xh9 OR uh9 OR xul OR vbt OR xar OR urn OR 7ws OR paf OR 7m7 OR ucl OR ba5 OR zmb)))]:	 %NAME%%DGREEN% 	
+ItemDisplay[UNI !ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR xrn OR bad OR stu OR aar OR xui OR xar OR xit OR xts OR vgl OR xlg OR xvg OR xmg OR xtg OR uhg OR xlb OR lbl OR tbl OR zmb OR 9gi OR 7mp OR mau OR 9sp OR 9m9 OR 7sp OR 9sb OR 9cm OR 7gs OR bld OR 7dg OR 7wc OR 9tr OR 7sr OR am9 OR 7ta OR 6sw OR amb OR 8rx OR wst OR 8ss OR 8ls OR 8ws OR 9wn OR 9bw OR 7bw OR 7wb OR 7lw OR 9st OR uh9 OR bae OR xml OR upk OR ush OR 72a OR uts OR 8s8 OR 9fb OR 9gs OR 7ls OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 7ga OR 9pa OR 92h OR drd OR lbt OR 9gm OR plt OR xow OR gsd)]:	 %NAME%%DGREEN% 	
 
-/⃓̲ Catchall
-ItemDisplay[(UNI OR SET)]: %NAME%
+// Catchall - Unique/Set Items
+ItemDisplay[(UNI OR SET)]: %NAME%%DGREEN%
 
 
-/⃓̲ ┌──────────────────────────────────────────────┐
-/⃓̲═╡ Magic Items & Rare Class Items  (identified) ╞══════════════════════════════════════════════════════════════════════
-/⃓̲ └──────────────────────────────────────────────┘
-/⃓̲ Class Items with 4+ of any skill
+// ┌──────────────────────────────────────────────┐
+//═╡ Magic Items & Rare Class Items  (identified) ╞══════════════════════════════════════════════════════════════════════
+// └──────────────────────────────────────────────┘
+// Class Items with 4+ of any skill
 ItemDisplay[(MAG OR RARE) (CL7 (TABSK0>3 OR TABSK2>3))]: %NAME% %ORANGE%4+ Skills
 ItemDisplay[(MAG OR RARE) (CL5 (CLSK6>0 OR TABSK48>0) ((SK251>2 OR SK256>2 OR SK257>2 OR SK261>2 OR SK262>2 OR SK266>2 OR SK271>2 OR SK272>2 OR SK276>2 OR SK277>2) OR (TABSK48>2 (SK251>0 OR SK256>0 OR SK257>0 OR SK261>0 OR SK262>0 OR SK266>0 OR SK271>0 OR SK272>0 OR SK276>0 OR SK277>0)) OR ((CLSK6>1 OR TABSK48>1) (SK251>1 OR SK256>1 OR SK257>1 OR SK261>1 OR SK262>1 OR SK266>1 OR SK271>1 OR SK272>1 OR SK276>1 OR SK277>1))))]: %NAME% %ORANGE%4+ (Traps)
 ItemDisplay[(MAG OR RARE) (CL5 (CLSK6>0 OR TABSK49>0) ((SK252>2 OR SK253>2 OR SK258>2 OR SK263>2 OR SK264>2 OR SK267>2 OR SK268>2 OR SK273>2 OR SK278>2 OR SK279>2) OR (TABSK49>2 (SK252>0 OR SK253>0 OR SK258>0 OR SK263>0 OR SK264>0 OR SK267>0 OR SK268>0 OR SK273>0 OR SK278>0 OR SK279>0)) OR ((CLSK6>1 OR TABSK49>1) (SK252>1 OR SK253>1 OR SK258>1 OR SK263>1 OR SK264>1 OR SK267>1 OR SK268>1 OR SK273>1 OR SK278>1 OR SK279>1))))]: %NAME% %ORANGE%4+ (Shadow Disciplines)
@@ -473,14 +460,17 @@ ItemDisplay[(MAG OR RARE) ((CL6 OR WP11) (CLSK1>0 OR TABSK8>0) ((SK36>2 OR SK37>
 ItemDisplay[(MAG OR RARE) ((CL6 OR WP11) (CLSK1>0 OR TABSK9>0) ((SK38>2 OR SK42>2 OR SK43>2 OR SK48>2 OR SK49>2 OR SK53>2 OR SK54>2 OR SK57>2 OR SK58>2 OR SK63>2) OR (TABSK9>2 (SK38>0 OR SK42>0 OR SK43>0 OR SK48>0 OR SK49>0 OR SK53>0 OR SK54>0 OR SK57>0 OR SK58>0 OR SK63>0)) OR ((CLSK1>1 OR TABSK9>1) (SK38>1 OR SK42>1 OR SK43>1 OR SK48>1 OR SK49>1 OR SK53>1 OR SK54>1 OR SK57>1 OR SK58>1 OR SK63>1))))]: %NAME% %ORANGE%4+ (Lightning)
 ItemDisplay[(MAG OR RARE) ((CL6 OR WP11) (CLSK1>0 OR TABSK10>0) ((SK39>2 OR SK40>2 OR SK44>2 OR SK45>2 OR SK50>2 OR SK55>2 OR SK59>2 OR SK60>2 OR SK64>2 OR SK65>2) OR (TABSK10>2 (SK39>0 OR SK40>0 OR SK44>0 OR SK45>0 OR SK50>0 OR SK55>0 OR SK59>0 OR SK60>0 OR SK64>0 OR SK65>0)) OR ((CLSK1>1 OR TABSK10>1) (SK39>1 OR SK40>1 OR SK44>1 OR SK45>1 OR SK50>1 OR SK55>1 OR SK59>1 OR SK60>1 OR SK64>1 OR SK65>1))))]: %NAME% %ORANGE%4+ (Cold)
 
-/⃓̲ Skillmod Items
+// Catchall - Rare Class Items
+ItemDisplay[RARE]: %NAME%
+
+// Skillmod Items
 ItemDisplay[MAG EQ4 ((TABSK0>2 OR TABSK2>2) IAS>10)]: %NAME% %ORANGE%+3%DGREEN%
 ItemDisplay[MAG EQ4 ((TABSK0>2 OR TABSK2>2) OR ((TABSK0>1 OR TABSK1>2 OR TABSK2>1) IAS>0) OR ((TABSK0>0 OR TABSK1>1 OR TABSK2>0) IAS>10))]: %NAME% %TAN%+%DGREEN%
 ItemDisplay[MAG EQ4 (TABSK50>2 IAS>10)]: %NAME% %TAN%+3%DGREEN%
 ItemDisplay[(MAG (WEAPON !(WP8 OR (WP7 !WP6))) TABSK34>2)]: %NAME% %ORANGE%+3 Warcries%DGREEN%
 ItemDisplay[MAG (WP2 TABSK40>2)]: %NAME% %TAN%+3 Summoning%DGREEN%
 
-/⃓̲ Popular Crafting Ingredients  (identified)
+// Popular Crafting Ingredients  (identified)
 ItemDisplay[MAG ILVL>47 (vgl OR xvg OR uvg)]:	%NAME% %ORANGE%[%RED%@%ORANGE%]%DGREEN%+%ORANGE%Nef %GRAY%[L%ILVL%]%DGREEN%		// Blood Gloves
 ItemDisplay[MAG ILVL>47 (tbt OR xtb OR utb)]:	%NAME% %ORANGE%[%RED%@%ORANGE%]%DGREEN%+%ORANGE%Eth %GRAY%[L%ILVL%]%DGREEN%		// Blood Boots
 ItemDisplay[MAG ILVL>47 (zmb OR umc)]:		%NAME% %ORANGE%[%RED%@%ORANGE%]%DGREEN%+%ORANGE%Tal %GRAY%[L%ILVL%]%DGREEN%		// Blood Belt
@@ -492,5 +482,5 @@ ItemDisplay[MAG ILVL>47 uit]:			%NAME% %ORANGE%[%GREEN%@%ORANGE%]%DGREEN%+%ORANG
 ItemDisplay[MAG ILVL>47 hbt]:			%NAME% %ORANGE%[%GREEN%@%ORANGE%]%DGREEN%+%ORANGE%Ort %GRAY%[L%ILVL%]%DGREEN%		// Safety Boots
 ItemDisplay[MAG ILVL>47 (zlb OR ulc)]:		%NAME% %ORANGE%[%GREEN%@%ORANGE%]%DGREEN%+%ORANGE%Tal %GRAY%[L%ILVL%]%DGREEN%		// Safety Belt
 
-/⃓̲ Catchall
-ItemDisplay[MAG OR RARE]: %NAME%
+// Catchall - Magic Items
+ItemDisplay[MAG]: %NAME%
