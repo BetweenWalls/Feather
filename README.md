@@ -2,7 +2,7 @@
 Simple Lootfilter for Diablo II: Path of Diablo
 
 ## Overview
-This filter is a simplified version of the [Journey filter](https://github.com/BetweenWalls/Journey. Very few items are hidden.
+This filter is a simplified version of the [Journey filter](https://github.com/BetweenWalls/Journey). Very few items are hidden.
 
 ## Features
 * Mostly follows classic style (it still looks like D2)
@@ -19,14 +19,15 @@ This filter is a simplified version of the [Journey filter](https://github.com/B
 ### Hidden Items:
 * smaller gold piles
 * low-level potions
-* regular (white) items:
-** arrows/bolts
-** gloves, boots, belts
-** 1-socket items
-** skill-capable items without skills
+* regular arrows/bolts
+* regular gloves, boots, belts
+* regular 1-socket items
+* skill-capable regular items without skills
 
 ## Installation
-Follow the [wiki instructions](https://pathofdiablo.com/wiki/index.php?title=List_of_Loot_Filters#How_to_Use) and use the direct URL listed at the top of the filter.
+Follow the [wiki instructions](https://pathofdiablo.com/wiki/index.php?title=List_of_Loot_Filters#How_to_Use) and use this link:
+
+https://raw.githubusercontent.com/BetweenWalls/Feather/master/item.filter
 
 ## Images
 ![_](/images/miscellaneous_items.png)
