@@ -22,7 +22,9 @@ This filter is a simplified version of the [Journey filter](https://github.com/B
 * regular arrows/bolts
 * regular gloves, boots, belts
 * regular 1-socket items
-* skill-capable regular items without skills
+* regular daggers that can't have more than 1 socket
+* regular bows/crossbows with 5 sockets
+* regular skill-capable items without skills
 
 ## Installation
 Follow the [wiki instructions](https://pathofdiablo.com/wiki/index.php?title=List_of_Loot_Filters#How_to_Use) and use this link:
