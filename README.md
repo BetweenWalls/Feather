@@ -19,11 +19,9 @@ This filter is a simplified version of the [Journey filter](https://github.com/B
 ### Hidden Items:
 * smaller gold piles
 * low-level potions
-* regular arrows/bolts
-* regular gloves, boots, belts
-* regular 1-socket items
-* regular daggers that can't have more than 1 socket
-* regular bows/crossbows with 5 sockets
+* scrolls
+* keys (in most areas)
+* regular items that have zero use for runewords
 * regular skill-capable items without skills
 
 ## Installation
