@@ -256,10 +256,10 @@ ItemDisplay[RARE !ID]: %NAME%
 // Hidden: Regular non-class items with no runeword useability - level 15
 //    gloves, boots, belts
 //    1-socket
-//    daggers incapable of 2 sockets, 5 socket bows
+//    daggers/shields incapable of 2 sockets, 5 socket bows
 ItemDisplay[NMAG CLVL>14 (EQ4 OR EQ5 OR EQ6)]:
 ItemDisplay[NMAG CLVL>14 !(CL1 OR CL2 OR CL4 OR CL5 OR CL6 OR WP11 OR WP12 OR WP13) SOCK=1]:
-ItemDisplay[NMAG CLVL>14 ((WP4 (dgr OR 9dg OR 7dg OR dir OR 9di OR 7di)) OR (WP9 SOCK=5))]:
+ItemDisplay[NMAG CLVL>14 ((dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR buc OR xuc) OR (WP9 (SOCK=5 OR (SOCK=0 SUP (lbw OR 8lb OR 6lb OR sbb OR 8s8 OR 6s7 OR swb OR 8sw OR 6sw OR rxb OR 8rx OR 6rx)))))]:
 
 // Hidden: Skill-Capable Items without skills  (ilvl 10+)
 //    GROUP			EXCEPTIONS							LEVEL
