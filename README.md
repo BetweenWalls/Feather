@@ -33,5 +33,5 @@ https://raw.githubusercontent.com/BetweenWalls/Feather/master/item.filter
 ![_](/images/miscellaneous_items.png)
 ![_](/images/unidentified_items.png)
 ![_](/images/uniques_special_properties.png)
-![_](/images/runes.png)
 ![_](/images/regular_items.png)
+![_](/images/runes.png)
