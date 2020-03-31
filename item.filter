@@ -238,9 +238,6 @@ ItemDisplay[MAG !ID]: %NAME%
 // ┌────────────────────────────┐
 //═╡ Rare Items  (unidentified) ╞════════════════════════════════════════════════════════════════════════════════════════
 // └────────────────────────────┘
-// Modification: Ethereal
-ItemDisplay[RARE !ID ETH]: %GRAY%eth %YELLOW%%NAME%%CONTINUE%
-
 // Highlighting
 //    +2-skill-capable Circlets, Class Helms
 //    gloves, boots
