@@ -56,7 +56,7 @@ ItemDisplay[yps]:	%DGREEN%[] %WHITE%A			// Antidote
 //═╡ Other Basic Items ╞═════════════════════════════════════════════════════════════════════════════════════════════════
 // └───────────────────┘
 // Show Keys in Cow Levels & Arcane Sanctuary (Hell difficulty)
-ItemDisplay[key (ILVL=28 OR ILVL=64 OR ILVL=81 OR ILVL=79))]: %GRAY%%NAME%%DGREEN%
+ItemDisplay[key (ILVL=28 OR ILVL=64 OR ILVL=81 OR ILVL=79))]: %GRAY%%NAME%
 
 // Hidden: Scrolls and Keys - level 20
 ItemDisplay[(key OR tsc OR isc) CLVL>19]:
@@ -73,12 +73,12 @@ ItemDisplay[pk3]:	%NAME% %GRAY%(Nihlathak)		// Key of Destruction
 // PoD Items
 ItemDisplay[cx5]:	%RED% Orb of Corruption 		// Orb of Corruption
 ItemDisplay[cx7]:	%ORANGE%   Key of Chaos   		// Key of Chaos
-ItemDisplay[ma4 ID]: %TAN%Desecrated Temple %GRAY%[T1 Relic]%RED%	// T1
-ItemDisplay[ma5 ID]: %TAN%Frigid Plateau %GRAY%[T2 Relic]%RED%		// T2
-ItemDisplay[ma6 ID]: %TAN%Ruined Citadel %GRAY%[T3 Relic]%RED%		// T3
-ItemDisplay[ma2 ID]: %TAN%Forgotten Desert %GRAY%[T4 Relic]%RED%	// T4
+ItemDisplay[ma4 ID]: %TAN%Desecrated Temple %GRAY%[T1 Relic]	// T1
+ItemDisplay[ma5 ID]: %TAN%Frigid Plateau %GRAY%[T2 Relic]	// T2
+ItemDisplay[ma6 ID]: %TAN%Ruined Citadel %GRAY%[T3 Relic]	// T3
+ItemDisplay[ma2 ID]: %TAN%Forgotten Desert %GRAY%[T4 Relic]	// T4
 ItemDisplay[ma4 OR ma5 OR ma6 OR ma2 OR maz]: %TAN%%NAME%
-ItemDisplay[cm4]:	  Horadrim Sigil  			// Horadrim Sigil
+ItemDisplay[cm4]:	  Horadrim Sigil  			// Horadrim Sigil Grand Charm
 ItemDisplay[cx8]:	  %DGREEN%%NAME%  			// Orb of Enchantment
 
 // Miscellaneous
