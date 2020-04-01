@@ -2,25 +2,24 @@
 Simple Lootfilter for Diablo II: Path of Diablo
 
 ## Overview
-This filter is a simplified version of the [Journey filter](https://github.com/BetweenWalls/Journey). Very few items are hidden.
+This filter is a simplified version of the [Journey](https://github.com/BetweenWalls/Journey) filter. Very few items are hidden.
 
 ## Features
-* Mostly follows classic style (it still looks like D2)
-* Non-Equipment more clearly distinguished from Equipment (gems, jewels, charms)
-* unique/set highlighting based on individual item value
-* amount of individual skills shown
-* value of highest individual skill shown
-* rules for unique/set items with shared bases or natural sockets
-* self-repairing eth uniques are distinguished from other eth uniques
-* popular crafting ingredients shown with codified recipes
-* useful magic items such as +3 Warcries 'BO sticks' or those with 4+ to any skill are highlighted
+* mostly follows classic style (it still looks like D2)
+* non-equipment more clearly distinguished from equipment (gems, jewels, charms)
+* unique/set/other items highlighted based on their usefulness
+* regular items displayed with amount of skills and highest skill value
+* popular crafting ingredients marked with codified recipes
+* natural sockets shown for unidentified unique/set items
+* enhanced damage/defense shown for superior items
 * identified relics show their tier
+* shopping for valuable items from merchants made easier
 
 ### Hidden Items:
 * smaller gold piles
 * low-level potions
 * scrolls
-* keys (in most areas)
+* keys
 * regular items that have zero use for runewords
 * regular skill-capable items without skills
 
