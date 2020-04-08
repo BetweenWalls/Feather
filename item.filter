@@ -1,6 +1,6 @@
 //═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 /	"Feather" Item Filter for Diablo II: Path of Diablo
-/		Date Updated:	31 MAR 2020
+/		Date Updated:	8 APR 2020
 /		Direct URL:     https://raw.githubusercontent.com/BetweenWalls/Feather/master/item.filter
 //═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 / Notes:
@@ -35,8 +35,8 @@ ItemDisplay[(wms OR vps) CLVL>29]:
 ItemDisplay[vps]:	%WHITE%[] %GRAY%S			// Stamina
 ItemDisplay[wms]:	%YELLOW%[] %GRAY%T			// Thawing
 
-// Hidden: Throwing Potions - level 50
-ItemDisplay[(opl OR opm OR ops OR gpl OR gpm OR gps) CLVL>49]:
+// Hidden: Throwing Potions - level 15
+ItemDisplay[(opl OR opm OR ops OR gpl OR gpm OR gps) CLVL>14]:
 ItemDisplay[opl]:	%DGREEN%[] %GRAY%f¹			// Fulminating
 ItemDisplay[opm]:	%DGREEN%[] %GRAY%f²			// Exploding
 ItemDisplay[ops]:	%DGREEN%[] %GRAY%f³			// Oil
@@ -203,7 +203,7 @@ ItemDisplay[(aq2 OR cq2) (CLVL>9 NMAG)]:
 ItemDisplay[(aq2 OR cq2) !UNI]: %NAME%
 
 // Jewelry
-ItemDisplay[MAG ID ((amu ILVL>85) OR (rin ILVL>61))]: %NAME% %GRAY%[L%ILVL%]	// ilvl for crafting
+ItemDisplay[MAG ID ((amu ILVL>81) OR (rin ILVL>61))]: %NAME% %GRAY%[L%ILVL%]	// ilvl for crafting
 ItemDisplay[(amu OR rin) RARE !ID]:	  %NAME%  				// rare jewelry highlighted
 ItemDisplay[(amu OR rin) (MAG OR RARE)]: %NAME%
 
