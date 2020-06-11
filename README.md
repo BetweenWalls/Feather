@@ -22,6 +22,7 @@ This filter is a simplified version of the [Journey](https://github.com/BetweenW
 * keys
 * regular items that have zero use for runewords
 * regular skill-capable items without skills
+* magic non-elite items without lasting usefulness
 
 ## Installation
 Follow the [wiki instructions](https://pathofdiablo.com/wiki/index.php?title=List_of_Loot_Filters#How_to_Use) and use this link:
