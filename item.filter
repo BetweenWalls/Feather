@@ -220,7 +220,7 @@ ItemDisplay[(amu OR rin) (MAG OR RARE)]: %NAME%
 //═╡ Rare/Unique/Set/Runeword/Crafted Items  (identified) ╞══════════════════════════════════════════════════════════════
 // └──────────────────────────────────────────────────────┘
 // Unique/Set Items
-ItemDisplay[((RARE OR RW OR UNI OR SET) ID)]: %NAME%	ItemDisplay[((UNI OR SET) ID)]: %NAME%
+ItemDisplay[((UNI OR SET) ID)]: %NAME%
 
 // Rares
 ItemDisplay[RARE ID]: %NAME%
