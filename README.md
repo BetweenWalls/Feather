@@ -18,6 +18,7 @@ This filter is a simplified version of the [Journey](https://github.com/BetweenW
 ### Hidden Items:
 * smaller gold piles
 * low-level potions
+* low-level gems
 * scrolls
 * keys
 * regular items that have zero use for runewords
