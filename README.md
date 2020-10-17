@@ -11,8 +11,7 @@ This filter is a simplified version of the [Journey](https://github.com/BetweenW
 * regular items displayed with amount of skills and highest skill value
 * popular crafting ingredients marked with codified recipes
 * natural sockets shown for unidentified unique/set items
-* enhanced damage/defense shown for superior items
-* identified relics show their tier
+* enhanced damage/defense and reduced requirements shown for superior items
 * shopping for valuable items from merchants made easier
 
 ### Hidden Items:
@@ -24,6 +23,7 @@ This filter is a simplified version of the [Journey](https://github.com/BetweenW
 * regular items that have zero use for runewords
 * regular skill-capable items without skills
 * magic non-elite items without lasting usefulness
+* some additional regular/magic items (minimal usefulness) in maps
 
 ## Installation
 Follow the [wiki instructions](https://pathofdiablo.com/wiki/index.php?title=List_of_Loot_Filters#How_to_Use) and use this link:
