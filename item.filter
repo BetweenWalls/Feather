@@ -1,6 +1,6 @@
 //═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 /	"Feather" Item Filter for Diablo II: Path of Diablo
-/		Date Updated:	24 OCT 2020
+/		Date Updated:	5 MAR 2021
 /		Info:		https://github.com/BetweenWalls/Feather
 /		Direct URL:     https://raw.githubusercontent.com/BetweenWalls/Feather/master/item.filter
 //═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -258,11 +258,11 @@ ItemDisplay[MAG !ID ILVL>47 (vgl OR xvg OR uvg OR tbt OR xtb OR utb OR zmb OR um
 ItemDisplay[MAG !ID (NORM OR EXC) CLVL>80 ILVL>85 !(CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7 OR WP11 OR WP12 OR WP13 OR EQ7)]:
 
 // Hidden: Unworthy elite items from maps (not class items, recipe ingredients, circlets, or high-price throwables) - level 80
-ItemDisplay[MAG !ID ELT CLVL>80 ILVL>85 ((WEAPON !(WP1 OR WP2 OR (WP5 !7b8) OR WP11 OR WP12 OR WP13 OR CL5 OR CL6 OR CL7)) OR (ARMOR !(CL1 OR CL2 OR CL3 OR CL4 OR EQ7 OR (upk OR uml OR uts OR uit) OR (ulm OR usk OR uhl OR urn) OR (ult OR utp OR uld OR urs) OR (uvg OR ulg OR umg OR uhg) OR (utb OR ulb OR umb OR uhb) OR (umc OR uvc OR utc OR ulc))))]:
+ItemDisplay[MAG !ID ELT CLVL>80 ILVL>85 ((WEAPON !(WP1 OR WP2 OR (WP5 !7b8) OR WP7 OR WP11 OR WP12 OR WP13 OR CL5 OR CL6 OR CL7)) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7sr OR 7tr) OR (ARMOR !(CL1 OR CL2 OR CL3 OR CL4 OR EQ7 OR (upk OR uml OR uts OR uit) OR (ulm OR usk OR uhl OR urn) OR (ult OR utp OR uld OR urs) OR (uvg OR ulg OR umg OR uhg) OR (utb OR ulb OR umb OR uhb) OR (umc OR uvc OR utc OR ulc))))]:
 
 // Hidden: Unworthy normal & exceptional items (not class items, recipe ingredients, circlets, or high-price throwables) - level 40 & 70
-ItemDisplay[MAG !ID (NORM CLVL>39) ((WEAPON (WP3 OR WP4 OR WP8 OR ((WP5 OR WP7 OR WP9) !CL7))) OR (ARMOR !(CL1 OR CL2 OR CL3 OR CL4 OR EQ7 OR (spk OR sml OR gts OR kit) OR (hlm OR msk OR fhl OR crn) OR (plt OR ltp OR fld OR brs) OR (vgl OR lgl OR mgl OR hgl) OR (tbt OR lbt OR mbt OR hbt) OR (mbl OR vbl OR tbl OR lbl))))]:
-ItemDisplay[MAG !ID (EXC CLVL>69) ((WEAPON (WP3 OR (WP4 !WP5) OR WP8 OR ((WP7 OR WP9) !CL7))) OR (ARMOR !(CL1 OR CL2 OR CL3 OR CL4 OR EQ7 OR (xpk OR xml OR xts OR xit) OR (xlm OR xsk OR xhl OR xrn) OR (xlt OR xtp OR xld OR xrs) OR (xvg OR xlg OR xmg OR xhg) OR (xtb OR xlb OR xmb OR xhb) OR (zmb OR zvb OR ztb OR zlb))))]:
+ItemDisplay[MAG !ID (NORM CLVL>39) ((WEAPON !(WP1 OR WP2 OR (WP5 !bal) OR WP7 OR WP11 OR WP12 OR WP13 OR CL5 OR CL6 OR CL7)) OR (hax OR lax OR clb OR spc OR mac OR mst OR spr OR tri) OR (ARMOR !(CL1 OR CL2 OR CL3 OR CL4 OR EQ7 OR (spk OR sml OR gts OR kit) OR (hlm OR msk OR fhl OR crn) OR (plt OR ltp OR fld OR brs) OR (vgl OR lgl OR mgl OR hgl) OR (tbt OR lbt OR mbt OR hbt) OR (mbl OR vbl OR tbl OR lbl))))]:
+ItemDisplay[MAG !ID (EXC CLVL>69) ((WEAPON !(WP1 OR WP2 OR (WP5 !9b8) OR WP7 OR WP11 OR WP12 OR WP13 OR CL5 OR CL6 OR CL7)) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9sr OR 9tr) OR (ARMOR !(CL1 OR CL2 OR CL3 OR CL4 OR EQ7 OR (xpk OR xml OR xts OR xit) OR (xlm OR xsk OR xhl OR xrn) OR (xlt OR xtp OR xld OR xrs) OR (xvg OR xlg OR xmg OR xhg) OR (xtb OR xlb OR xmb OR xhb) OR (zmb OR zvb OR ztb OR zlb))))]:
 
 // Modification: Ethereal
 ItemDisplay[MAG ETH]: %GRAY%eth %BLUE%%NAME%%CONTINUE%
@@ -303,10 +303,17 @@ ItemDisplay[NMAG CLVL>14 (dgr OR 9dg OR 7dg OR dir OR 9di OR 7di OR buc OR xuc O
 ItemDisplay[NMAG CLVL>14 (NORM OR 9b8 OR 7b8) (WP5 !CL7)]:
 ItemDisplay[NMAG CLVL>14 INF !(CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7 OR WP11 OR WP12 OR WP13)]:
 
-// Hidden: Non-superior non-class items from maps (low/zero-socket normal, non-eth 0-socket exceptional, non-eth 0-socket elites that cannot have more than 2 sockets) - level 80
-ItemDisplay[NMAG NORM !SUP SOCK<3 CLVL>80 ILVL>85 !(CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7 OR WP11 OR WP12 OR WP13 OR EQ7)]:
-ItemDisplay[NMAG EXC !SUP !(SOCK>0 OR ETH) CLVL>80 ILVL>85 !(CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7 OR WP11 OR WP12 OR WP13 OR EQ7)]:
-ItemDisplay[NMAG ELT !SUP !(SOCK>0 OR ETH) CLVL>80 ILVL>85 (uap OR ukp OR ulm OR uhl OR uuc OR uml OR 7ha OR 7cl OR 7sp OR 7ma OR 7ss OR 7sm OR 7sb OR 7fc OR 7bl)]:
+// Hidden: Worst non-class normal/exceptional items (excluding any with at least 2 of: ethereal, superior, 3+ sockets) - level 90	...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
+ItemDisplay[NMAG NORM CLVL>89 !((ETH ((ED>0 OR !ITEMSTAT91=0) OR SOCK>2)) OR ((ED>0 OR !ITEMSTAT91=0) SOCK>2)) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful OR stu) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}
+ItemDisplay[NMAG EXC CLVL>89  !((ETH ((ED>0 OR !ITEMSTAT91=0) OR SOCK>2)) OR ((ED>0 OR !ITEMSTAT91=0) SOCK>2)) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul OR xtu) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]: {%NAME%}
+
+// Hidden: Worst non-class elite weapons that are incapable of more than 2 sockets (excluding any that are both ethereal & superior) - level 90
+ItemDisplay[NMAG ELT CLVL>89 !(ETH (ED>0 OR !ITEMSTAT91=0)) (7ha OR 7cl OR 7sp OR 7ma OR 7ss OR 7sm OR 7sb OR 7fc OR 7dg OR 7di OR 7bl)]: {%NAME%}
+
+// Hidden: Worst non-class items at each tier (excluding any ethereal, superior, or 3+ socket items) - levels 40, 60, 80		...socketable armors incapable of 3os (after upgrades), medium/heavy armors (except Sacred Armor line), high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
+ItemDisplay[NMAG NORM CLVL>39 !(ETH OR ED>0 OR !ITEMSTAT91=0 OR SOCK>2) ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (rng OR scl OR chn OR spl OR fld OR plt OR gth OR ful OR stu) OR (buc OR sml OR lrg OR tow OR gts) OR (hax OR lax OR clb OR spc OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}
+ItemDisplay[NMAG EXC CLVL>59  !(ETH OR ED>0 OR !ITEMSTAT91=0 OR SOCK>2) ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xng OR xcl OR xhn OR xpl OR xld OR xlt OR xth OR xul OR xtu) OR (xuc OR xml OR xrg OR xow OR xts) OR (9ha OR 9la OR 9cl OR 9sp OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]: {%NAME%}
+ItemDisplay[NMAG ELT CLVL>79  !(ETH OR ED>0 OR !ITEMSTAT91=0 OR SOCK>2) ((uap OR ukp OR ulm OR uhl OR uhm OR urn) OR (ung OR ucl OR uhn OR upl OR uld OR ult OR uth OR uul OR utu) OR (uuc OR uml OR urg OR uow OR uts) OR (7ha OR 7la OR 7cl OR 7sp OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx OR 6mx)) !(uap SOCK=2)]: {%NAME%}
 
 // Hidden: Skill-Capable Items without skills  (ilvl 10+)
 //    GROUP			EXCEPTIONS							LEVEL
@@ -435,36 +442,213 @@ ItemDisplay[NMAG CL7]: %NAME%
 //    0-socket text divider
 ItemDisplay[NMAG CL3 ED>0 SOCK=0]: %NAME% %GRAY%­%CONTINUE%
 //    Enhanced Damage
-ItemDisplay[NMAG ITEMSTAT18>64]: %NAME% %BLUE%+65
-ItemDisplay[NMAG ITEMSTAT18=64]: %NAME% %BLUE%+64
-ItemDisplay[NMAG ITEMSTAT18=63]: %NAME% %BLUE%+63
-ItemDisplay[NMAG ITEMSTAT18=62]: %NAME% %BLUE%+62
-ItemDisplay[NMAG ITEMSTAT18=61]: %NAME% %BLUE%+61
-ItemDisplay[NMAG ITEMSTAT18=60]: %NAME% %BLUE%+60
-ItemDisplay[NMAG ITEMSTAT18>54]: %NAME% %BLUE%55+
-ItemDisplay[NMAG ITEMSTAT18>49]: %NAME% %BLUE%50+
-ItemDisplay[NMAG ITEMSTAT18>44]: %NAME% %BLUE%45+
-ItemDisplay[NMAG ITEMSTAT18>39]: %NAME% %BLUE%40+
-ItemDisplay[NMAG ITEMSTAT18>34]: %NAME% %BLUE%35+
-ItemDisplay[NMAG ITEMSTAT18>29]: %NAME% %BLUE%30+
-ItemDisplay[NMAG ITEMSTAT18>24]: %NAME% %BLUE%25+
-ItemDisplay[NMAG ITEMSTAT18>19]: %NAME% %BLUE%20+
-ItemDisplay[NMAG ITEMSTAT18>14]: %NAME% %BLUE%15+
-ItemDisplay[NMAG ITEMSTAT18>9]: %NAME% %BLUE%10+
+ItemDisplay[NMAG ITEMSTAT18=65]: %NAME% %BLUE%+65%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=64]: %NAME% %BLUE%+64%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=63]: %NAME% %BLUE%+63%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=62]: %NAME% %BLUE%+62%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=61]: %NAME% %BLUE%+61%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=60]: %NAME% %BLUE%+60%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=59]: %NAME% %BLUE%+59%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=58]: %NAME% %BLUE%+58%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=57]: %NAME% %BLUE%+57%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=56]: %NAME% %BLUE%+56%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=55]: %NAME% %BLUE%+55%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=54]: %NAME% %BLUE%+54%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=53]: %NAME% %BLUE%+53%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=52]: %NAME% %BLUE%+52%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=51]: %NAME% %BLUE%+51%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=50]: %NAME% %BLUE%+50%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=49]: %NAME% %BLUE%+49%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=48]: %NAME% %BLUE%+48%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=47]: %NAME% %BLUE%+47%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=46]: %NAME% %BLUE%+46%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=45]: %NAME% %BLUE%+45%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=44]: %NAME% %BLUE%+44%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=43]: %NAME% %BLUE%+43%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=42]: %NAME% %BLUE%+42%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=41]: %NAME% %BLUE%+41%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=40]: %NAME% %BLUE%+40%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=39]: %NAME% %BLUE%+39%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=38]: %NAME% %BLUE%+38%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=37]: %NAME% %BLUE%+37%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=36]: %NAME% %BLUE%+36%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=35]: %NAME% %BLUE%+35%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=34]: %NAME% %BLUE%+34%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=33]: %NAME% %BLUE%+33%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=32]: %NAME% %BLUE%+32%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=31]: %NAME% %BLUE%+31%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=30]: %NAME% %BLUE%+30%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=29]: %NAME% %BLUE%+29%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=28]: %NAME% %BLUE%+28%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=27]: %NAME% %BLUE%+27%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=26]: %NAME% %BLUE%+26%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=25]: %NAME% %BLUE%+25%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=24]: %NAME% %BLUE%+24%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=23]: %NAME% %BLUE%+23%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=22]: %NAME% %BLUE%+22%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=21]: %NAME% %BLUE%+21%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=20]: %NAME% %BLUE%+20%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=19]: %NAME% %BLUE%+19%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=18]: %NAME% %BLUE%+18%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=17]: %NAME% %BLUE%+17%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=16]: %NAME% %BLUE%+16%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=15]: %NAME% %BLUE%+15%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=14]: %NAME% %BLUE%+14%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=13]: %NAME% %BLUE%+13%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=12]: %NAME% %BLUE%+12%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=11]: %NAME% %BLUE%+11%CONTINUE%
+ItemDisplay[NMAG ITEMSTAT18=10]: %NAME% %BLUE%+10%CONTINUE%
+//	Attack Rating
+ItemDisplay[NMAG ITEMSTAT19=121]: %NAME%/+121%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=120]: %NAME%/+120%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=119]: %NAME%/+119%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=118]: %NAME%/+118%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=117]: %NAME%/+117%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=116]: %NAME%/+116%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=115]: %NAME%/+115%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=114]: %NAME%/+114%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=113]: %NAME%/+113%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=112]: %NAME%/+112%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=111]: %NAME%/+111%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=110]: %NAME%/+110%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=109]: %NAME%/+109%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=108]: %NAME%/+108%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=107]: %NAME%/+107%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=106]: %NAME%/+106%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=105]: %NAME%/+105%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=104]: %NAME%/+104%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=103]: %NAME%/+103%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=102]: %NAME%/+102%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=101]: %NAME%/+101%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=100]: %NAME%/+100%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=99]: %NAME%/+99%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=98]: %NAME%/+98%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=97]: %NAME%/+97%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=96]: %NAME%/+96%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=95]: %NAME%/+95%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=94]: %NAME%/+94%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=93]: %NAME%/+93%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=92]: %NAME%/+92%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=91]: %NAME%/+91%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=90]: %NAME%/+90%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=89]: %NAME%/+89%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=88]: %NAME%/+88%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=87]: %NAME%/+87%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=86]: %NAME%/+86%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=85]: %NAME%/+85%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=84]: %NAME%/+84%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=83]: %NAME%/+83%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=82]: %NAME%/+82%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=81]: %NAME%/+81%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=80]: %NAME%/+80%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=79]: %NAME%/+79%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=78]: %NAME%/+78%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=77]: %NAME%/+77%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=76]: %NAME%/+76%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=75]: %NAME%/+75%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=74]: %NAME%/+74%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=73]: %NAME%/+73%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=72]: %NAME%/+72%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=71]: %NAME%/+71%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=70]: %NAME%/+70%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=69]: %NAME%/+69%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=68]: %NAME%/+68%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=67]: %NAME%/+67%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=66]: %NAME%/+66%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=65]: %NAME%/+65%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=64]: %NAME%/+64%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=63]: %NAME%/+63%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=62]: %NAME%/+62%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=61]: %NAME%/+61%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=60]: %NAME%/+60%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=59]: %NAME%/+59%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=58]: %NAME%/+58%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=57]: %NAME%/+57%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=56]: %NAME%/+56%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=55]: %NAME%/+55%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=54]: %NAME%/+54%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=53]: %NAME%/+53%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=52]: %NAME%/+52%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=51]: %NAME%/+51%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=50]: %NAME%/+50%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=49]: %NAME%/+49%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=48]: %NAME%/+48%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=47]: %NAME%/+47%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=46]: %NAME%/+46%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=45]: %NAME%/+45%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=44]: %NAME%/+44%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=43]: %NAME%/+43%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=42]: %NAME%/+42%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=41]: %NAME%/+41%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=40]: %NAME%/+40%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=39]: %NAME%/+39%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=38]: %NAME%/+38%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=37]: %NAME%/+37%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=36]: %NAME%/+36%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=35]: %NAME%/+35%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=34]: %NAME%/+34%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=33]: %NAME%/+33%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=32]: %NAME%/+32%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=31]: %NAME%/+31%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=30]: %NAME%/+30%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=29]: %NAME%/+29%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=28]: %NAME%/+28%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=27]: %NAME%/+27%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=26]: %NAME%/+26%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=25]: %NAME%/+25%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=24]: %NAME%/+24%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=23]: %NAME%/+23%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=22]: %NAME%/+22%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=21]: %NAME%/+21%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=20]: %NAME%/+20%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=19]: %NAME%/+19%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=18]: %NAME%/+18%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=17]: %NAME%/+17%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=16]: %NAME%/+16%WHITE%
+ItemDisplay[NMAG ITEMSTAT19=15]: %NAME%/+15%WHITE%
 //    Resistances
-ItemDisplay[NMAG RES>44]: %NAME% %BLUE%+45 Res
-ItemDisplay[NMAG RES=44]: %NAME% %BLUE%+44 Res
-ItemDisplay[NMAG RES=43]: %NAME% %BLUE%+43 Res
-ItemDisplay[NMAG RES=42]: %NAME% %BLUE%+42 Res
-ItemDisplay[NMAG RES=41]: %NAME% %BLUE%+41 Res
-ItemDisplay[NMAG RES=40]: %NAME% %BLUE%+40 Res
-ItemDisplay[NMAG RES>34]: %NAME% %BLUE%35+ Res
-ItemDisplay[NMAG RES>29]: %NAME% %BLUE%30+ Res
-ItemDisplay[NMAG RES>24]: %NAME% %BLUE%25+ Res
-ItemDisplay[NMAG RES>19]: %NAME% %BLUE%20+ Res
-ItemDisplay[NMAG RES>14]: %NAME% %BLUE%15+ Res
-ItemDisplay[NMAG RES>9]: %NAME% %BLUE%10+ Res
-ItemDisplay[NMAG RES>4]: %NAME% %BLUE%5+ Res
+ItemDisplay[NMAG RES=45]: %NAME% %BLUE%+45%WHITE%
+ItemDisplay[NMAG RES=44]: %NAME% %BLUE%+44%WHITE%
+ItemDisplay[NMAG RES=43]: %NAME% %BLUE%+43%WHITE%
+ItemDisplay[NMAG RES=42]: %NAME% %BLUE%+42%WHITE%
+ItemDisplay[NMAG RES=41]: %NAME% %BLUE%+41%WHITE%
+ItemDisplay[NMAG RES=40]: %NAME% %BLUE%+40%WHITE%
+ItemDisplay[NMAG RES=39]: %NAME% %BLUE%+39%WHITE%
+ItemDisplay[NMAG RES=38]: %NAME% %BLUE%+38%WHITE%
+ItemDisplay[NMAG RES=37]: %NAME% %BLUE%+37%WHITE%
+ItemDisplay[NMAG RES=36]: %NAME% %BLUE%+36%WHITE%
+ItemDisplay[NMAG RES=35]: %NAME% %BLUE%+35%WHITE%
+ItemDisplay[NMAG RES=34]: %NAME% %BLUE%+34%WHITE%
+ItemDisplay[NMAG RES=33]: %NAME% %BLUE%+33%WHITE%
+ItemDisplay[NMAG RES=32]: %NAME% %BLUE%+32%WHITE%
+ItemDisplay[NMAG RES=31]: %NAME% %BLUE%+31%WHITE%
+ItemDisplay[NMAG RES=30]: %NAME% %BLUE%+30%WHITE%
+ItemDisplay[NMAG RES=29]: %NAME% %BLUE%+29%WHITE%
+ItemDisplay[NMAG RES=28]: %NAME% %BLUE%+28%WHITE%
+ItemDisplay[NMAG RES=27]: %NAME% %BLUE%+27%WHITE%
+ItemDisplay[NMAG RES=26]: %NAME% %BLUE%+26%WHITE%
+ItemDisplay[NMAG RES=25]: %NAME% %BLUE%+25%WHITE%
+ItemDisplay[NMAG RES=24]: %NAME% %BLUE%+24%WHITE%
+ItemDisplay[NMAG RES=23]: %NAME% %BLUE%+23%WHITE%
+ItemDisplay[NMAG RES=22]: %NAME% %BLUE%+22%WHITE%
+ItemDisplay[NMAG RES=21]: %NAME% %BLUE%+21%WHITE%
+ItemDisplay[NMAG RES=20]: %NAME% %BLUE%+20%WHITE%
+ItemDisplay[NMAG RES=19]: %NAME% %BLUE%+19%WHITE%
+ItemDisplay[NMAG RES=18]: %NAME% %BLUE%+18%WHITE%
+ItemDisplay[NMAG RES=17]: %NAME% %BLUE%+17%WHITE%
+ItemDisplay[NMAG RES=16]: %NAME% %BLUE%+16%WHITE%
+ItemDisplay[NMAG RES=15]: %NAME% %BLUE%+15%WHITE%
+ItemDisplay[NMAG RES=14]: %NAME% %BLUE%+14%WHITE%
+ItemDisplay[NMAG RES=13]: %NAME% %BLUE%+13%WHITE%
+ItemDisplay[NMAG RES=12]: %NAME% %BLUE%+12%WHITE%
+ItemDisplay[NMAG RES=11]: %NAME% %BLUE%+11%WHITE%
+ItemDisplay[NMAG RES=10]: %NAME% %BLUE%+10%WHITE%
+ItemDisplay[NMAG RES=9]: %NAME% %BLUE%+9%WHITE%
+ItemDisplay[NMAG RES=8]: %NAME% %BLUE%+8%WHITE%
+ItemDisplay[NMAG RES=7]: %NAME% %BLUE%+7%WHITE%
+ItemDisplay[NMAG RES=6]: %NAME% %BLUE%+6%WHITE%
+ItemDisplay[NMAG RES=5]: %NAME% %BLUE%+5%WHITE%
+ItemDisplay[NMAG CL3]: %NAME%%WHITE%
 
 
 // ┌───────────────────────────┐
