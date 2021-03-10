@@ -1,6 +1,6 @@
 //═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 /	"Feather" Item Filter for Diablo II: Path of Diablo
-/		Date Updated:	9 MAR 2021
+/		Date Updated:	10 MAR 2021
 /		Info:		https://github.com/BetweenWalls/Feather
 /		Direct URL:     https://raw.githubusercontent.com/BetweenWalls/Feather/master/item.filter
 //═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -73,21 +73,21 @@ ItemDisplay[tsc CLVL>19]:
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%	// non-equipment
 
 // Endgame Quest Items
-ItemDisplay[tes]:	%MAP%  Essence of Suffering %GRAY%(Andariel & Duriel)  %WHITE%
-ItemDisplay[ceh]:	%MAP%  Essence of Hatred %GRAY%(Mephisto)  %WHITE%
-ItemDisplay[bet]:	%MAP%  Essence of Terror %GRAY%(Diablo)  %WHITE%
-ItemDisplay[fed]:	%MAP%  Essence of Destruction %GRAY%(Baal)  %WHITE%
+ItemDisplay[tes]:	%NOTIFY-ORANGE%  Essence of Suffering %GRAY%(Andariel & Duriel)  %WHITE%
+ItemDisplay[ceh]:	%NOTIFY-ORANGE%  Essence of Hatred %GRAY%(Mephisto)  %WHITE%
+ItemDisplay[bet]:	%NOTIFY-ORANGE%  Essence of Terror %GRAY%(Diablo)  %WHITE%
+ItemDisplay[fed]:	%NOTIFY-ORANGE%  Essence of Destruction %GRAY%(Baal)  %WHITE%
 //ItemDisplay[toa]:	%NAME%%WHITE%							// Token of Absolution
-ItemDisplay[pk1]:	%ORANGE%%MAP%  %NAME% %GRAY%(Countess)  %WHITE%			// Key of Terror
-ItemDisplay[pk2]:	%ORANGE%%MAP%  %NAME% %GRAY%(Summoner)  %WHITE%			// Key of Hatred
-ItemDisplay[pk3]:	%ORANGE%%MAP%  %NAME% %GRAY%(Izual)  %WHITE%			// Key of Destruction
+ItemDisplay[pk1]:	%NOTIFY-ORANGE%  %NAME% %GRAY%(Countess)  %WHITE%		// Key of Terror
+ItemDisplay[pk2]:	%NOTIFY-ORANGE%  %NAME% %GRAY%(Summoner)  %WHITE%		// Key of Hatred
+ItemDisplay[pk3]:	%NOTIFY-ORANGE%  %NAME% %GRAY%(Izual)  %WHITE%			// Key of Destruction
 //ItemDisplay[dhn]:	%NAME% %GRAY%(Lilith)%WHITE%					// Diablo's Horn
 //ItemDisplay[bey]:	%NAME% %GRAY%(Duriel)%WHITE%					// Baal's Eye
 //ItemDisplay[mbr]:	%NAME% %GRAY%(Izual)%WHITE%					// Mephisto's Brain
 
 // PoD Items
-ItemDisplay[cx5]:	%RED%%MAP% Orb of Corruption 		// Orb of Corruption
-ItemDisplay[cx7]:	%ORANGE%%MAP%   Key of Chaos   		// Key of Chaos
+ItemDisplay[cx5]:	%RED%%NOTIFY-RED% Orb of Corruption 		// Orb of Corruption
+ItemDisplay[cx7]:	%ORANGE%%NOTIFY-ORANGE%   Key of Chaos   		// Key of Chaos
 ItemDisplay[maz]:	%TAN%%NAME%%RED%			// Infernal Trial	("DClone")
 // Relics (maps)
 //ItemDisplay[ma1]: %NAME%					// Icy Cavern		(tier 1, white)
@@ -98,7 +98,7 @@ ItemDisplay[maz]:	%TAN%%NAME%%RED%			// Infernal Trial	("DClone")
 //ItemDisplay[ma2]: %NAME%					// Forgotten Desert	(tier 3, red)
 //ItemDisplay[ma7]: %NAME%					// Burnt Forest		(tier 3, red)
 //ItemDisplay[ma6]: %NAME%					// Ruined Citadel	(tier 3, red)
-ItemDisplay[ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10]: %TAN%%NAME%
+ItemDisplay[ma1 OR ma2 OR ma3 OR ma4 OR ma5 OR ma6 OR ma7 OR ma8 OR ma9 OR ma10]: %TAN%%NAME%%NOTIFY-TAN%
 // Legacy Items 
 //ItemDisplay[cm4]:	  Horadrim Sigil  			// Horadrim Sigil Grand Charm	(non-ladder only)
 //ItemDisplay[cx8]:	  %DGREEN%%NAME%  			// Orb of Enchantment		(non-ladder only)
@@ -124,7 +124,7 @@ ItemDisplay[GEMLEVEL=1]: *%ORANGE%]  %GRAY%%NAME%%CONTINUE%
 ItemDisplay[GEMLEVEL=2]: +%ORANGE%]  %GRAY%%NAME%%CONTINUE%
 ItemDisplay[GEMLEVEL=3]: ¤%ORANGE%]  %GRAY%%NAME%%CONTINUE%
 ItemDisplay[GEMLEVEL=4]: o%ORANGE%]  %WHITE%%NAME%%CONTINUE%
-ItemDisplay[GEMLEVEL=5]: @%ORANGE%]  %WHITE%%NAME%%CONTINUE%
+ItemDisplay[GEMLEVEL=5]: @%ORANGE%]  %WHITE%%NAME%%MAP%%CONTINUE%
 ItemDisplay[GEMTYPE=1]: %ORANGE%[%PURPLE%%NAME%
 ItemDisplay[GEMTYPE=2]: %ORANGE%[%WHITE%%NAME%
 ItemDisplay[GEMTYPE=3]: %ORANGE%[%GREEN%%NAME%
@@ -138,8 +138,9 @@ ItemDisplay[GEMTYPE=7]: %ORANGE%[%GRAY%%NAME%
 //═╡ Runes ╞═════════════════════════════════════════════════════════════════════════════════════════════════════════════
 // └───────┘
 // Modification
-ItemDisplay[RUNE>0]:	%NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%CONTINUE%	// appends rune number
-ItemDisplay[RUNE>0 RUNE<15 (CLVL<70 OR DIFFICULTY<2)]: %NAME%%PX-60%%CONTINUE%	// notifications for low runes when in Normal/Nightmare or below level 70
+ItemDisplay[RUNE>0]:	%NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%CONTINUE%			// appends rune number
+ItemDisplay[RUNE>0 RUNE<15 (CLVL<70 OR DIFFICULTY<2)]: %NAME%%NOTIFY-ORANGE%%CONTINUE%	// adds notifications for low runes when in Normal/Nightmare or below level 70
+ItemDisplay[RUNE>14]: %NAME%%NOTIFY-ORANGE%%CONTINUE%					// adds notifications for mid/high runes
 
 // Individual Rules
 //    Lowest Runes
@@ -158,27 +159,27 @@ ItemDisplay[r11]:	 %NAME% 					// Amn
 //ItemDisplay[r13]:	%NAME%						// Shael
 //ItemDisplay[r14]:	%NAME%						// Dol
 //    Upper Low Runes
-//ItemDisplay[r15]:	 %NAME%%MAP% 					// Hel
-//ItemDisplay[r16]:	 %NAME%%MAP% 					// Io
-//ItemDisplay[r17]:	 %NAME%%MAP% 					// Lum
-//ItemDisplay[r18]:	 %NAME%%MAP% 					// Ko
-//ItemDisplay[r19]:	 %NAME%%MAP% 					// Fal
+//ItemDisplay[r15]:	 %NAME% 					// Hel
+//ItemDisplay[r16]:	 %NAME% 					// Io
+//ItemDisplay[r17]:	 %NAME% 					// Lum
+//ItemDisplay[r18]:	 %NAME% 					// Ko
+//ItemDisplay[r19]:	 %NAME% 					// Fal
 //    Mid Runes
-//ItemDisplay[r20]:	  %NAME%%MAP%  					// Lem
-//ItemDisplay[r21]:	  %NAME%%MAP%  					// Pul
-//ItemDisplay[r22]:	   %NAME%%MAP%   				// Um
-//ItemDisplay[r23]:	   %NAME%%MAP%   				// Mal
-ItemDisplay[r24]:	    %NAME%%MAP%    				// Ist
-ItemDisplay[r25]:	     %NAME%%MAP%     				// Gul
+//ItemDisplay[r20]:	  %NAME%  					// Lem
+//ItemDisplay[r21]:	  %NAME%  					// Pul
+//ItemDisplay[r22]:	   %NAME%   					// Um
+//ItemDisplay[r23]:	   %NAME%   					// Mal
+ItemDisplay[r24]:	    %NAME%    					// Ist
+ItemDisplay[r25]:	     %NAME%     				// Gul
 //    High Runes
-ItemDisplay[r26]:	       %NAME%%MAP%       			// Vex
-ItemDisplay[r32]:	        %NAME%%MAP%        			// Cham
-ItemDisplay[r27]:	         %NAME%%MAP%         			// Ohm
-ItemDisplay[r29]:	          %NAME%%MAP%          			// Sur
-ItemDisplay[r33]:	           %NAME%%MAP%           		// Zod
-ItemDisplay[r28]:	            %NAME%%MAP%            		// Lo
-ItemDisplay[r30]:	              %NAME%%MAP%              		// Ber
-ItemDisplay[r31]:	                %NAME%%MAP%                	// Jah
+ItemDisplay[r26]:	       %NAME%       				// Vex
+ItemDisplay[r32]:	        %NAME%        				// Cham
+ItemDisplay[r27]:	         %NAME%         			// Ohm
+ItemDisplay[r29]:	          %NAME%          			// Sur
+ItemDisplay[r33]:	           %NAME%           			// Zod
+ItemDisplay[r28]:	            %NAME%            			// Lo
+ItemDisplay[r30]:	              %NAME%              		// Ber
+ItemDisplay[r31]:	                %NAME%                		// Jah
 
 // Collective Rules
 ItemDisplay[RUNE>0 RUNE<15]:	%NAME%
@@ -198,9 +199,9 @@ ItemDisplay[jew]:	{}%ORANGE%{%DARK_GREEN%O%ORANGE%} %NAME%%CONTINUE%	// prepends
 ItemDisplay[(cm1 OR cm2 OR cm3) MAG]: %PURPLE%%NAME%%CONTINUE%			// sets charm color
 
 // Highlighting
-ItemDisplay[jew RARE !ID]:								  %DOT-6D%%NAME%%WHITE%  	// jewels (unid rare)
-ItemDisplay[(cm1 OR cm3) MAG (ILVL>90 OR (cm1 (ILVL=47 OR (ILVL>56 ILVL<63))))]:	  %NAME%%WHITE%  		// charms (best ilvl for rerolling)
-ItemDisplay[((cm1 ILVL>46) OR (cm3 ILVL>49)) MAG]:					 %NAME%%WHITE% 			// charms (okay ilvl for rerolling)
+ItemDisplay[jew RARE !ID]:								  %NAME%%NOTIFY-YELLOW%%WHITE%  	// jewels (unid rare)
+ItemDisplay[(cm1 OR cm3) MAG (ILVL>90 OR (cm1 (ILVL=47 OR (ILVL>56 ILVL<63))))]:	  %NAME%%WHITE%  			// charms (best ilvl for rerolling)
+ItemDisplay[((cm1 ILVL>46) OR (cm3 ILVL>49)) MAG]:					 %NAME%%WHITE% 				// charms (okay ilvl for rerolling)
 
 
 // ┌─────────────────────────┐
@@ -213,8 +214,8 @@ ItemDisplay[(aqv OR cqv) NMAG CLVL>9]:
 ItemDisplay[(aq2 OR cq2) MAG !ID CLVL>39]:
 
 // Highlighting
-ItemDisplay[MAG amu ILVL>89]:		 %NAME% %WHITE%			// ilvl 90+ magic amulets
-ItemDisplay[RARE (amu OR rin) !ID]:	  %DOT-6D%%NAME%  %WHITE%	// rare jewelry
+ItemDisplay[MAG amu ILVL>89]:		 %NAME% %WHITE%				// ilvl 90+ magic amulets
+ItemDisplay[RARE (amu OR rin) !ID]:	  %NAME%%NOTIFY-YELLOW%  %WHITE%	// rare jewelry
 
 
 // ┌───────────────────┐
@@ -318,20 +319,20 @@ ItemDisplay[SET 7ws]: %NAME% %GRAY%[3-4]%CONTINUE%
 ItemDisplay[UNI 72a]: %NAME% %GRAY%[3-5]%CONTINUE%
 
 // Highlighting - Uniques				...reference table of highlights: https://docs.google.com/spreadsheets/d/1-vKTxRlgTxat3_INgrwa3YVMC3A3yJSMZw3uvD8YBoo/edit#gid=1932056366
-ItemDisplay[UNI ((ETH (xh9 OR ulm OR usk)) OR (!ETH (jew OR cm1 OR cm2 OR xh9 OR uap OR ulm OR usk OR ci3 OR baa OR dra OR xea OR xhn OR uui OR uit OR ulc OR 6lw OR 7gw OR obf OR obc OR (uar ILVL>86) OR (7gm ILVL>84) OR 7cr OR uhm)))]:	         %NAME%%BORDER-53%%WHITE%         						// Highlighting - 9 spaces
-ItemDisplay[UNI ((ETH (7gw OR obc OR obf)) OR (!ETH ((amu ILVL>84) OR (rin ILVL>83) OR pa9 OR uvg OR xtb OR xhb OR zhb OR 7wa OR nea)))]:	       %NAME%%BORDER-53%%WHITE%       																			// Highlighting - 7 spaces
-ItemDisplay[UNI ((ETH ama) OR (!ETH ((amu ILVL>72) OR (rin ILVL>65) OR cm3 OR dre OR xlt OR uld OR ama OR (7wh ILVL>82) OR (7sc ILVL>79) OR 6cs OR oba OR 6ws)))]:	     %NAME%%MAP-53%%WHITE%     																	// Highlighting - 5 spaces
-ItemDisplay[UNI ((ETH (xhn OR xlt)) OR (!ETH ((rin ILVL>38) OR ci2 OR bac OR tgl OR hgl OR xvb OR xmb OR zlb OR zvb OR umc OR 7kr OR 7s8 OR rxb OR urn OR (7fl ILVL>85) OR 7gd OR 7gm OR 7sc OR pac OR xrs OR upl)))]:	    %NAME%%MAP-53%%WHITE%    											// Highlighting - 4 spaces
-ItemDisplay[UNI ((ETH (6cs OR oba OR uvb OR 7s8 OR 6ws OR 7bk OR 7b8 OR ulc OR xrs)) OR (!ETH ((amu ILVL>57) OR xhm OR utu OR uvb OR uhb OR ztb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR 9ls OR am7 OR xtp OR uar OR 7fl OR 8lw OR 7bk OR 7m7 OR nef OR uow OR xpl)))]:	   %NAME%%DOT-53%%WHITE%   				// Highlighting - 3 spaces
-ItemDisplay[UNI ((ETH (uar OR uap OR baa OR dra OR ci3 OR uui OR 7wa OR 7sc OR 7o7 OR 7pa OR dgr OR uhm OR 9fc OR utu OR 7gm OR xpl OR 9ws OR 7ws)) OR (!ETH (xsh OR nee OR umg OR uvc OR 7b8 OR 8lb OR 8sw OR 9fc OR 7pa OR drb OR pae OR dgr OR 9bs OR umb OR 9mp OR 7wh OR tbl OR mgl)))]:	  %NAME%%DOT-53%%WHITE%  		// Highlighting - 2 spaces
+ItemDisplay[UNI ((ETH (xh9 OR ulm OR usk)) OR (!ETH (jew OR cm1 OR cm2 OR xh9 OR uap OR ulm OR usk OR ci3 OR baa OR dra OR xea OR xhn OR uui OR uit OR ulc OR 6lw OR 7gw OR obf OR obc OR (uar ILVL>86) OR (7gm ILVL>84) OR 7cr OR uhm)))]:	         %NAME%%NOTIFY-GOLD%%WHITE%         						// Highlighting - 9 spaces
+ItemDisplay[UNI ((ETH (7gw OR obc OR obf)) OR (!ETH ((amu ILVL>84) OR (rin ILVL>83) OR pa9 OR uvg OR xtb OR xhb OR zhb OR 7wa OR nea)))]:	       %NAME%%NOTIFY-GOLD%%WHITE%       																		// Highlighting - 7 spaces
+ItemDisplay[UNI ((ETH ama) OR (!ETH ((amu ILVL>72) OR (rin ILVL>65) OR cm3 OR dre OR xlt OR uld OR ama OR (7wh ILVL>82) OR (7sc ILVL>79) OR 6cs OR oba OR 6ws)))]:	     %NAME%%NOTIFY-GOLD%%WHITE%     																// Highlighting - 5 spaces
+ItemDisplay[UNI ((ETH (xhn OR xlt)) OR (!ETH ((rin ILVL>38) OR ci2 OR bac OR tgl OR hgl OR xvb OR xmb OR zlb OR zvb OR umc OR 7kr OR 7s8 OR rxb OR urn OR (7fl ILVL>85) OR 7gd OR 7gm OR 7sc OR pac OR xrs OR upl)))]:	    %NAME%%NOTIFY-GOLD%%WHITE%    										// Highlighting - 4 spaces
+ItemDisplay[UNI ((ETH (6cs OR oba OR uvb OR 7s8 OR 6ws OR 7bk OR 7b8 OR ulc OR xrs)) OR (!ETH ((amu ILVL>57) OR xhm OR utu OR uvb OR uhb OR ztb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR 9ls OR am7 OR xtp OR uar OR 7fl OR 8lw OR 7bk OR 7m7 OR nef OR uow OR xpl)))]:	   %NAME%%NOTIFY-GOLD%%WHITE%   			// Highlighting - 3 spaces
+ItemDisplay[UNI ((ETH (uar OR uap OR baa OR dra OR ci3 OR uui OR 7wa OR 7sc OR 7o7 OR 7pa OR dgr OR uhm OR 9fc OR utu OR 7gm OR xpl OR 9ws OR 7ws)) OR (!ETH (xsh OR nee OR umg OR uvc OR 7b8 OR 8lb OR 8sw OR 9fc OR 7pa OR drb OR pae OR dgr OR 9bs OR umb OR 9mp OR 7wh OR tbl OR mgl)))]:	  %NAME%%NOTIFY-GOLD%%WHITE%  		// Highlighting - 2 spaces
 ItemDisplay[UNI ((ETH (9cr OR 7cs OR 9tk OR xkp OR xlm OR xrn OR bac OR xts OR xhb OR ztb OR 7sp OR 9ta OR 9wn OR 9bw OR 7bw OR 7br OR 9bs OR 7kr OR 72a OR 7gi OR dre OR 7fl OR 7m7 OR umb OR xhm OR 7wh OR 7s7 OR 9st OR zvb OR zhb OR uhb OR xmb OR xtb OR uvg OR nea OR nef OR pa9 OR uow OR upk OR upl OR xea)) OR (!ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR xrn OR bad OR stu OR aar OR xui OR xar OR xts OR vgl OR xlg OR xmg OR xtg OR uhg OR xlb OR lbl OR 9gi OR 7mp OR mau OR 9sp OR 9m9 OR 7sp OR 9sb OR 9cm OR 7gs OR 7dg OR 7wc OR 7sr OR am9 OR 6sw OR amb OR 8rx OR 8ls OR 8ws OR 9wn OR 9bw OR 7bw OR 7wb OR 7lw OR uh9 OR bae OR upk OR 72a OR uts OR 8s8 OR 9fb OR 9gs OR 7ls OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 7ga OR 9pa OR 92h OR drd OR lbt OR 9gm OR plt OR xow OR gsd OR 9gw OR 9tw OR 7p7 OR 7br OR 7o7 OR uml OR cap)))]:	 %NAME%%WHITE% 	// Highlighting - 1 space
 // Highlighting - Sets
-ItemDisplay[SET (uar OR uth)]:	         %NAME%%BORDER-84%%WHITE%         		// Highlighting - 9 spaces
-ItemDisplay[SET ulg]:	     %NAME%%MAP-84%%WHITE%     					// Highlighting - 5 spaces
-ItemDisplay[SET ((amu ILVL>25) OR xhm OR xtb OR xmg)]:	    %NAME%%MAP-84%%WHITE%    	// Highlighting - 4 spaces
-ItemDisplay[SET 7qr]:	   %NAME%%DOT-84%%WHITE%   					// Highlighting - 3 spaces
-ItemDisplay[SET (ult OR xhb OR ci3 OR zvb OR xmb OR ne9 OR utc OR oba OR xsk OR uhm OR uld OR amc OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))))]:	  %NAME%%DOT-84%%WHITE%  		// Highlighting - 2 spaces
-ItemDisplay[SET ((amu ILVL>16) OR xap OR stu OR xhl OR 6cs OR 7gd OR uul OR zhb OR xhg OR xtg OR xh9 OR uh9 OR xul OR vbt OR xar OR urn OR 7ws OR paf OR 7m7 OR ucl OR ba5 OR zmb)]:	 %NAME%%WHITE% 		// Highlighting - 1 space
+ItemDisplay[SET (uar OR uth)]:	         %NAME%%NOTIFY-GREEN%%WHITE%         			// Highlighting - 9 spaces
+ItemDisplay[SET ulg]:	     %NAME%%NOTIFY-GREEN%%WHITE%     					// Highlighting - 5 spaces
+ItemDisplay[SET ((amu ILVL>25) OR xhm OR xtb OR xmg)]:	    %NAME%%NOTIFY-GREEN%%WHITE%    	// Highlighting - 4 spaces
+ItemDisplay[SET 7qr]:	   %NAME%%NOTIFY-GREEN%%WHITE%   					// Highlighting - 3 spaces
+ItemDisplay[SET (ult OR xhb OR ci3 OR zvb OR xmb OR ne9 OR utc OR oba OR xsk OR uhm OR uld OR amc OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))))]:	  %NAME%%NOTIFY-GREEN%%WHITE%  		// Highlighting - 2 spaces
+ItemDisplay[SET ((amu ILVL>16) OR xap OR stu OR xhl OR 6cs OR 7gd OR uul OR zhb OR xhg OR xtg OR xh9 OR uh9 OR xul OR vbt OR xar OR urn OR 7ws OR paf OR 7m7 OR ucl OR ba5 OR zmb)]:	 %NAME%%WHITE% 			// Highlighting - 1 space
 
 // Catchall - Unique/Set Items
 ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
@@ -341,11 +342,11 @@ ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
 //═╡ Rare Items  (unidentified) ╞════════════════════════════════════════════════════════════════════════════════════════
 // └────────────────────────────┘
 // Highlighting
-ItemDisplay[RARE !ID ILVL>36 ((EQ4 ILVL>42) OR EQ5)]:	 %NAME%%WHITE% 								// gloves, boots
-ItemDisplay[RARE !ID ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71))]:	  %NAME%%WHITE%  		// +2-skill-capable circlets
-ItemDisplay[RARE CL5 ILVL>49 !(NORM OR 9ar OR 9wb OR 9xf)]:	 %NAME%%WHITE% 							// +2-skill-capable katars
-//ItemDisplay[RARE (CL1 OR CL2) ILVL>49]:	 %NAME%%WHITE% 									// +2-skill-capable class helms
-//ItemDisplay[RARE !ID ILVL>55 (rxb OR 8rx OR 6rx OR crs OR 9cr OR 7cr OR mpi OR 9mp OR 7mp OR wsc OR 9wc OR 7wc OR wsp OR 9ws OR 7ws OR gax OR 9ga OR 7ga)]:	 %NAME%%WHITE% 	// highest-IAS-capable weapons
+ItemDisplay[RARE !ID ILVL>36 ((EQ4 ILVL>42) OR EQ5)]:	 %NAME%%WHITE% 									// gloves, boots
+ItemDisplay[RARE !ID ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71))]:	  %NAME%%NOTIFY-YELLOW%%WHITE%  	// +2-skill-capable circlets
+ItemDisplay[RARE !ID CL5 ILVL>49 !(NORM OR 9ar OR 9wb OR 9xf)]:	 %NAME%%WHITE% 								// +2-skill-capable katars
+ItemDisplay[RARE !ID (CL1 OR CL2) ILVL>49]:	 %NAME%%WHITE% 										// +2-skill-capable class helms
+ItemDisplay[RARE !ID ILVL>55 (rxb OR 8rx OR 6rx OR crs OR 9cr OR 7cr OR mpi OR 9mp OR 7mp OR wsc OR 9wc OR 7wc OR wsp OR 9ws OR 7ws OR gax OR 9ga OR 7ga)]:	 %NAME%%WHITE% 	// highest-IAS-capable weapons
 
 // Catchall
 ItemDisplay[RARE !ID]: %NAME%%WHITE%
