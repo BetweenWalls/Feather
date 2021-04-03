@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 /	"Feather" Item Filter for Diablo II: Path of Diablo
-/		Date Updated:	21 MAR 2021
+/		Date Updated:	3 APR 2021
 /		Info:		https://github.com/BetweenWalls/Feather
 /		Direct URL:     https://raw.githubusercontent.com/BetweenWalls/Feather/master/feather.filter
 //-----------------------------------------------------------------------------------------------------------------------
@@ -17,7 +17,7 @@
 //-¦ Gold and Potions ¦--------------------------------------------------------------------------------------------------
 // +------------------+
 // Hidden: smaller gold piles - levels 5, 10, 20, 30, 50, 70, 80, 90, 95
-ItemDisplay[((GOLD<10000 CLVL>94) OR (GOLD<5000 CLVL>89) OR (GOLD<3000 CLVL>79) OR (GOLD<1800 CLVL>69) OR (GOLD<1200 CLVL>49) OR (GOLD<600 CLVL>29) OR (GOLD<300 CLVL>19) OR (GOLD<100 CLVL>9) OR (GOLD<30 CLVL>4))]:
+ItemDisplay[((GOLD<7000 CLVL>94) OR (GOLD<4000 CLVL>89) OR (GOLD<2500 CLVL>79) OR (GOLD<1800 CLVL>69) OR (GOLD<1200 CLVL>49) OR (GOLD<600 CLVL>29) OR (GOLD<300 CLVL>19) OR (GOLD<100 CLVL>9) OR (GOLD<30 CLVL>4))]:
 ItemDisplay[GOLD>0]: %NAME%
 
 // Rejuvenation
@@ -82,7 +82,7 @@ ItemDisplay[fed]:	%NOTIFY-ORANGE%  Essence of Destruction  {%GRAY%(Baal)}%WHITE%
 //ItemDisplay[toa]:	%NAME%%WHITE%							// Token of Absolution
 ItemDisplay[pk1]:	%NOTIFY-ORANGE%  %NAME%  {%GRAY%(Countess)}%WHITE%		// Key of Terror
 ItemDisplay[pk2]:	%NOTIFY-ORANGE%  %NAME%  {%GRAY%(Summoner)}%WHITE%		// Key of Hatred
-ItemDisplay[pk3]:	%NOTIFY-ORANGE%  %NAME%  {%GRAY%(Izual)}%WHITE%			// Key of Destruction
+ItemDisplay[pk3]:	%NOTIFY-ORANGE%  %NAME%  {%GRAY%(Nihlathak)}%WHITE%		// Key of Destruction
 //ItemDisplay[dhn]:	%NAME%{%GRAY%(Lilith)}%WHITE%					// Diablo's Horn
 //ItemDisplay[bey]:	%NAME%{%GRAY%(Duriel)}%WHITE%					// Baal's Eye
 //ItemDisplay[mbr]:	%NAME%{%GRAY%(Izual)}%WHITE%					// Mephisto's Brain
@@ -591,9 +591,9 @@ ItemDisplay[NMAG !(CL1 OR CL2 OR CL3 OR CL4 OR CL5 OR CL6 OR CL7 OR WP11 OR WP12
 // +---------------------+
 //-¦ Regular Class Items ¦-----------------------------------------------------------------------------------------------
 // +---------------------+
-// Hidden: 1-socket items larger than 3 inventory spaces, all 1-socket items (excluding merchant items) - levels 30, 90
+// Hidden: 1-socket items larger than 3 inventory spaces, all 1-socket items (excluding merchant items) - levels 30, 80
 ItemDisplay[NMAG SOCK=1 CLVL>29 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14))) !(WAND OR sst OR 8ss OR 6ss OR (SCEPTER !wsp !9ws !7ws) OR SIN OR SOR)]: {%NAME%}
-ItemDisplay[NMAG SOCK=1 CLVL>89 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)))]: {%NAME%}
+ItemDisplay[NMAG SOCK=1 CLVL>79 !(DIFF=0 ((ILVL=12 CLVL>6) OR (ILVL=20 CLVL>14)))]: {%NAME%}
 
 // Hidden: Unworthy class items - level 80
 ItemDisplay[NMAG DIN (RES<15 STAT17<30 SOCK<3) CLVL>79]: {%NAME%}			// shields below 30 enhanced damage or 15 all resistance, unless they have 3-4 sockets
