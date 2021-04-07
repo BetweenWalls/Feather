@@ -548,7 +548,7 @@ ItemDisplay[ED=8 NMAG]: %NAME% %BLUE%+8{%NAME%}%CONTINUE%
 ItemDisplay[ED=7 NMAG]: %NAME% %BLUE%+7{%NAME%}%CONTINUE%
 ItemDisplay[ED=6 NMAG]: %NAME% %BLUE%+6{%NAME%}%CONTINUE%
 ItemDisplay[ED=5 NMAG]: %NAME% %BLUE%+5{%NAME%}%CONTINUE%
-ItemDisplay[!STAT91=0 NMAG]: %NAME% %BLUE%%STAT91%{%NAME%}%CONTINUE%
+ItemDisplay[!STAT91=0 NMAG]: %NAME% %BLUE%-%STAT91%{%NAME%}%CONTINUE%
 ItemDisplay[NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]{%NAME%}%CONTINUE%
 
 // Forces regular merchant items to be displayed
