@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 /	"Feather" Item Filter for Diablo II: Path of Diablo
-/		Date Updated:	3 APR 2021
+/		Date Updated:	29 JUNE 2021
 /		Info:		https://github.com/BetweenWalls/Feather
 /		Direct URL:     https://raw.githubusercontent.com/BetweenWalls/Feather/master/feather.filter
 //-----------------------------------------------------------------------------------------------------------------------
@@ -202,8 +202,8 @@ ItemDisplay[(cm1 OR cm2 OR cm3) MAG]: %PURPLE%%NAME%%CONTINUE%			// sets charm c
 
 // Highlighting
 ItemDisplay[jew RARE !ID]:								  %NAME%%NOTIFY-YELLOW%%WHITE%  	// jewels (unid rare)
-ItemDisplay[(cm1 OR cm3) MAG (ILVL>90 OR (cm1 (ILVL=47 OR (ILVL>56 ILVL<63))))]:	  %NAME%%WHITE%  			// charms (best ilvl for rerolling)
-ItemDisplay[((cm1 ILVL>46) OR (cm3 ILVL>49)) MAG]:					 %NAME%%WHITE% 				// charms (okay ilvl for rerolling)
+ItemDisplay[(cm1 OR cm3) MAG (ILVL>90 OR (cm1 (ILVL=47 OR (ILVL>56 ILVL<63))))]:	  %NAME%{%NAME%}%WHITE%  		// charms (best ilvl for rerolling)
+ItemDisplay[((cm1 ILVL>46) OR (cm3 ILVL>49)) MAG]:					 %NAME%{%NAME%}%WHITE% 			// charms (okay ilvl for rerolling)
 
 
 // +-------------------------+
@@ -246,7 +246,7 @@ ItemDisplay[STAT73>0 STAT72=0 !ETH WEAPON]: %NAME%{%WHITE%Repair Recipe: %TAN%(%
 //-¦ Runeword/Unique/Set/Rare/Crafted Items  (identified) ¦--------------------------------------------------------------
 // +------------------------------------------------------+
 // Runewords
-ItemDisplay[RW]: %NAME%%WHITE%
+ItemDisplay[RW]: %NAME%{%NAME%}%WHITE%
 
 // Unique Items
 ItemDisplay[UNI ID ILVL>40 SOCK=0 NORM (bhm OR ci0 OR ci1 OR buc OR spk OR bsh OR kit OR tow OR gts OR (EQ2 !gth !ful !aar))]: %NAME%{%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%@%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%WHITE%		// Upgrade Armor (Normal)
@@ -448,7 +448,7 @@ ItemDisplay[MAG !ID]: %NAME%%WHITE%
 //-¦ Regular Items ¦-----------------------------------------------------------------------------------------------------
 // +---------------+
 // Gambling Items
-ItemDisplay[NMAG !ID]: %NAME%
+ItemDisplay[NMAG !ID]: %NAME%{%NAME%}
 
 // Descriptions for available Runewords																					// ...Major Differences: Plague (new RW for all 3-socket weapons, Cham+Fal+Um)
 ItemDisplay[NMAG (HELM OR CIRC) SOCK=2]: %NAME%{%WHITE%Runewords: %GOLD%Nadir, Lore}%CONTINUE%														// Helm 2s
